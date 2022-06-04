@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js" integrity="sha512-mh+AjlD3nxImTUGisMpHXW03gE6F4WdQyvuFRkjecwuWLwD2yCijw4tKA3NsEFpA1C3neiKhGXPSIGSfCYPMlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" integrity="sha512-rBi1cGvEdd3NmSAQhPWId5Nd6QxE8To4ADjM2a6n0BrqQdisZ/RPUlm0YycDzvNL1HHAh1nKZqI0kSbif+5upQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Veyvey</title>
+</head>
+<body>
+    <header class="main-padding">
+        <div class="container  p-0 m-auto">
+          <div class="row justify-content-between">
+            <div class="col">
+              <div class="logo ">
+                  <img src="assets/images/Logo.svg" alt="">
+                  <img src="assets/images/Logo-text.svg" alt="">
+              </div>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="lang-currency-dropdown d-inline-block me-2">
+                    <div class="dropdown">
+                        <button id="langDropdownBtn" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" class="text-white">
+                          <img src="./assets/images/us-flag.png" alt="" class="lang-icon me-1">
+                          $
+                          <img src="./assets/images/header-dropdown-icon.svg" alt="" class="ms-1">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="langDropdownBtn">
+                          <li class="section-title"><a class="dropdown-item  mb-2 px-0 text-dark" href="#">Change language</a></li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">English
+                              <span class="text-grey ms-2">EN</span>
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">Georgian
+                              <span class="text-grey ms-2">GE</span>                              
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">Russian
+                              <span class="text-grey ms-2">RU</span>
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <hr>
+                          <li class="section-title"><a class="dropdown-item mb-2 px-0 text-decoration-none text-dark" href="#">Change Currency</a></li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">USD
+                              <span class="text-grey">us dollar</span>
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">GEL
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                          <li class="dropdown-item ">
+                            <label class="custom-radio text-dark">RUB
+                              <input type="radio" checked="checked" name="language">
+                              <span class="checkmark"></span>
+                            </label>
+                          </li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="make-a-listing-btn bg-white d-inline-block me-2">
+                  <img src="./assets/images/make-a-listing-icon.svg" alt="">
+                  <p class="mb-0 text-dark d-inline">Make a listing</p>
+                </div>
+                <div class="auth-btn bg-dark d-inline-block">
+                  <img src="./assets/images/profile-icon.svg" alt="" class="me-2">
+                  <p class="mb-0 text-white d-inline">Join</p>
+                </div>
+            </div>
+          </div>
+          <div class="row mt-3 pt-100">
+            <div class="col-12 mb-3">
+              <p class="text-white primary-title">A better way to stay</p>
+              <p class="text-white secondary-title">Find deals on hotels, homes and more...</p>
+            </div>
+            <!-- categories -->
+            <div class="categories-wrapper d-flex mb-2">
+              <div class="single-category active d-inline-flex">
+                <img src="assets/images/category-icon.svg" alt="" class="single-category__icon me-2">
+                <p class="mb-0 single-category__text">Test</p>
+              </div>
+              <div class="single-category d-inline-flex">
+                <img src="assets/images/category-icon.svg" alt="" class="single-category__icon me-2">
+                <p class="mb-0 single-category__text">Test</p>
+              </div>
+              <div class="single-category d-inline-flex">
+                <img src="assets/images/category-icon.svg" alt="" class="single-category__icon me-2">
+                <p class="mb-0 single-category__text">Test</p>
+              </div>
+            </div>
+            <!-- Search section -->
+            <div class="search-wrapper bg-white d-flex position-relative justify-content-between">
+              <div>
+                <div class="location text-dark d-inline-block me-5">
+                  <div id="locationDropdownBtn"  data-bs-toggle="dropdown" aria-expanded="false"  class="form-floating d-inline-block w-100 position-relative">
+                    <input type="email" class="form-control" id="findLocation" placeholder="name@example.com" value="Search location">
+                    <label for="findLocation">Find location</label>
+                    <img src="./assets/images/location-main-icon.svg" alt="" class="location-main-icon position-absolute start-100 cursor-pointer">
+                  </div>
+                  <ul class="dropdown-menu" aria-labelledby="locationDropdownBtn">
+                    <li class="section-title"><a class="dropdown-item  mb-2 px-0 text-dark" href="#">Top destionations</a></li>
+                    <li class="dropdown-item ">
+                      <div class="center-vertically cursor-pointer d-inline-block">
+                        <img src="./assets/images/location-icon.svg" alt="" class="center-vertically position-absolute">
+                        <p class="city-name mb-0 text-dark d-inline ms-4">Marietta</p>
+                        <p class="location d-inline">City in Atlanta, Georgia</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="date text-dark d-inline-block cursor-pointer" name="date">
+                  <div class="d-flex">
+                    <div class="from me-3">
+                      <p class="title ">from</p>
+                      <p class="text-dark date mb-0">Add date</p>
+                    </div>
+                    <img src="./assets/images/arrow-right-icon.svg" alt="" class="me-3">
+                    <div class="until">
+                      <p class="title">until</p>
+                      <p class="text-dark date mb-0">Add date</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="guests d-inline-block ms-5 cursor-pointer" data-bs-auto-close="outside" id="guestsDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <p class="title mb-0">Guests</p>
+                  <p class="guests">Add guests</p> 
+                </div>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">
+                      <div class="single-room">
+                        <p class="title text-dark">Room 1</p>
+                      </div>
+                      <div class="d-flex">
+                        <div class="guest-type me-3">
+                          <p class="guest-type__title mb-0">Adults</p>
+                          <p class="guest-type__desc mb-0">17 or above</p>
+                        </div>
+                        <div class="valueCalc">
+                            <span class="minus cursor-pointer">-</span>
+                            <input disabled class="value" value="0"></span>
+                            <span class="plus cursor-pointer">+</span>
+                        </div>                     
+                      </div>
+                    </a></li>
+                    <hr>                
+                    <li><a class="dropdown-item text-center cursor-pointer" href="#">
+                      <img src="./assets/images/add-room-icon.svg" alt="">
+                      <p class="mb-0 d-inline-block add-room">Add room</p>
+                    </a></li>
+                  </ul>
+                </div>
+                <div class="">
+                  <div class="search-btn center-vertically cursor-pointer">
+                    <img src="./assets/images/search-icon.svg" alt="" class="me-3">
+                    <p class="mb-0 text-white d-inline ">Search</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Offers -->
+    <section class="pt-100">
+        <div class="text-center">
+          <p class="section-title">What we offer</p>
+          <p class="section-desc">Book your dream stay now and pay over time</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <img src="./assets/images/offers-img.svg" alt="" class="offers-img">
+              <p class="offers-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="offers-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/offers-img.svg" alt="" class="offers-img">
+              <p class="offers-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="offers-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/offers-img.svg" alt="" class="offers-img">
+              <p class="offers-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="offers-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/offers-img.svg" alt="" class="offers-img">
+              <p class="offers-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="offers-desc">book top rated hotels Georgia</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Why us -->
+    <section class="pt-100 why-us text-dark">
+        <div class="text-center">
+          <p class="section-title">Why Veyvey</p>
+          <p class="section-desc">World Travel Award 1st place in the
+Leading Online Travel Agency</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Benefits -->
+    <section class="pt-100 text-dark mb-100">
+        <div class="text-center">
+          <p class="section-title">Our benefits</p>
+          <p class="section-desc">Best experience possible brought to you by Veyvey team</p>
+        </div>
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-6">
+              <div class="position-relative">
+                <img src="./assets/images/benefits-img.svg" class="w-100" alt="">
+                <img src="./assets/images/benefits-img2.svg" class="benefits-img2 position-absolute bottom-0 end-0" alt="">
+                <img src="./assets/images/benefits-img3.svg" alt="" class="benefits-img3">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="center-vertically ms-4">
+                <img src="./assets/images/benefits-icon1.svg" alt="" class="mb-4">
+                <p class="mb-3 benefits-title">New listing in seconds</p>
+                <p class="benefits-desc mb-4">We offer self check-in and 24/7 guest support via our app. 
+                  Whenever possible, we resolve guest requests with 
+                  contact-free service.
+                </p>
+                <img src="./assets/images/benefits-icons.svg" alt="">
+              </div>
+            </div>
+            <!-- <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div>
+            <div class="col-3">
+              <img src="./assets/images/why-us-img.svg" alt="" class="why-us-img">
+              <p class="why-us-title mb-1 mt-4">Looking for perfect room?</p>
+              <p class="why-us-desc">book top rated hotels Georgia</p>
+            </div> -->
+          </div>
+          <div class="row ">
+            <div class="col-6 ">
+              <div class="center-vertically ms-4">
+                <img src="./assets/images/benefits-icon1.svg" alt="" class="mb-4">
+                <p class="mb-3 benefits-title">New listing in seconds</p>
+                <p class="benefits-desc mb-4">We offer self check-in and 24/7 guest support via our app. 
+                  Whenever possible, we resolve guest requests with 
+                  contact-free service.
+                </p>
+                <img src="./assets/images/benefits-icons.svg" alt="">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="position-relative">
+                <img src="./assets/images/benefits-img4.svg" class="w-100" alt="">
+                <img src="./assets/images/benefits-img5.svg" class="benefits-img2 position-absolute top-0 end-0" alt="">
+                <img src="./assets/images/benefits-img3.svg" alt="" class="benefits-img5 position-absolute  end-0">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="pt-100 top-destinations" style="padding-bottom: 100px;">
+        <div class="section-inner">
+          <div class="text-center">
+            <p class="section-title">Top Destinations</p>
+            <p class="section-desc text-white">Discover surprising adventures from mountains to cities</p>
+          </div>
+        </div>
+        <div class="top-destinations-nav">
+
+        </div>
+        <div class="owl-carousel">
+          <div class="card destination-card">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+          <div class="card destination-card">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+          <div class="card destination-card">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+          <div class="card destination-card">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+          <div class="card destination-card">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Dropdown sample -->
+    <!-- <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <hr>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>\
+          <form action="#">
+          </form>
+          <div>
+            <label class="custom-radio">One
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio">Two
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-radio">three
+              <input type="radio" checked="checked" name="radio2">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio">Two
+              <input type="radio" name="radio2">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <form action="#">
+          </form>
+        </ul>
+      </div> -->
+      <!-- Calendar -->
+      <!-- <div name="date">123</div>       -->
+      
+      
+
+    <!-- <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          items: 2,
+          dots: true,
+          // dotsData: true,
+          nav: true,
+        });
+      });
+    </script> -->
+
+      <!-- scripts -->
+    <script>
+        $('[name="date"]').daterangepicker({
+            showDropdowns: true,
+            locale: {
+                cancelLabel: 'Clear'
+            },
+            minYear: 2022,
+            maxYear: 2024,
+        });
+        $('.end-date').on('click', function(){
+          var drp = $('[name="date"]').data('daterangepicker');
+          console.log(drp.endDate._d ,drp.startDate._d);
+        });
+        $('[name="date"]').on('apply.daterangepicker', function(){
+          console.log('applied');
+          var drp = $('[name="date"]').data('daterangepicker');
+          console.log(drp.endDate._d ,drp.startDate._d);
+        });
+        function days() {
+          var a = $("#datepicker_start").daterangepicker('getDate').getTime(),
+              b = $("#datepicker_end").daterangepicker('getDate').getTime(),
+              c = 24*60*60*1000,
+              diffDays = Math.round(Math.abs((a - b)/(c)));
+          console.log(diffDays); //show difference
+      }
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
