@@ -5,3 +5,7 @@ $('#burger-btn').on('click', () => {
 $('#navigation-close-btn').on('click', () => {
     $('.navigation-body').css('right', '100%');
 });
+
+$(".top-picker-item").click(function(){
+    $(this).toggleClass('picker-active');
+});
