@@ -21,9 +21,21 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         responsiveClass: true,
         responsive: {
-            955: {
+            980: {
                 items: 4,
             },
+
+            770: {
+                items: 3
+            },
+            
+            500: {
+                items: 2
+            },
+            
+            0: {
+                items: 1
+            }
         }
     });
 
