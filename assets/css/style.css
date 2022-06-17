@@ -303,6 +303,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
           align-items: center;
   padding: 6px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .top-section .section-body .top-picker-items .picker-active {
@@ -512,5 +513,115 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.experience .experience-items .experience-item .experience-left {
+  width: 500px;
+}
+
+.experience .experience-items .experience-item .experience-left img {
+  width: 100%;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img {
+  position: relative;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img img {
+  z-index: 2;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img .img-pattern-1 {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 0;
+  margin: 35px -65px;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img .img-pattern-2 {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  right: 0;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img .img-pattern-3 {
+  position: absolute;
+  width: 211px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  margin: -95px;
+}
+
+.experience .experience-items .experience-item .experience-left .experience-img .img-pattern-2-bottom {
+  position: absolute;
+  width: 165px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  margin: -70px;
+}
+
+.experience .experience-items .experience-item .experience-right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 45%;
+  text-align: left;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.5px;
+  color: #040921;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #040921;
+  opacity: 0.64;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-icon {
+  background: linear-gradient(246.12deg, rgba(157, 80, 255, 0.04) 11.55%, rgba(88, 60, 240, 0.04) 104.8%);
+  border-radius: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-logo-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 35px;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-logo-items .experience-logo-item {
+  padding: 0px 4px;
+}
+
+.experience .experience-items .experience-item .experience-right .experience-logo-items .experience-logo-item:first-child {
+  padding-left: 0px;
 }
 /*# sourceMappingURL=style.css.map */

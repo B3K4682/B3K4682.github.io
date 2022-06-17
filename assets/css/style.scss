@@ -281,6 +281,7 @@ header {
       align-items: center;
       padding: 6px;
       border-radius: 12px;
+      cursor: pointer;
 
       .picker-active {
         color: #fff !important;
@@ -461,6 +462,103 @@ header {
     .experience-item{
       display: flex;
       justify-content: space-between;
+
+      .experience-left{
+        width: 500px;
+
+        img{
+          width: 100%;
+        }
+
+        .experience-img{
+          position: relative;
+          img{
+            z-index: 2;
+          }
+
+          .img-pattern-1{
+            position: absolute;
+            width: 200px;
+            top: 0;
+            left: 0;
+            margin: 35px -65px;
+          }
+
+          .img-pattern-2{
+            position: absolute;
+            width: 300px;
+            bottom: 0;
+            right: 0;
+          }
+
+          .img-pattern-3{
+            position: absolute;
+            width: 211px;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+            margin: -95px;
+          }
+
+          .img-pattern-2-bottom{
+            position: absolute;
+            width: 165px;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+            margin: -70px;
+          }
+        }       
+      }
+      
+      .experience-right{
+        align-self: center;
+        width: 45%;
+        text-align: left;
+
+        .experience-title{
+          font-style: normal;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 43px;
+          align-items: center;
+          letter-spacing: 0.5px;
+          color: #040921;
+        }
+
+        .experience-desc{
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #040921;
+          opacity: 0.64;
+        }
+
+        .experience-icon{
+          background: linear-gradient(246.12deg, rgba(157, 80, 255, 0.04) 11.55%, rgba(88, 60, 240, 0.04) 104.8%);
+          border-radius: 44px;
+          display: flex; 
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          align-items: center;
+          margin-bottom: 50px;
+        }
+
+        .experience-logo-items{
+          display: flex;
+          margin-top: 35px;
+
+          .experience-logo-item{
+            padding: 0px 4px;
+
+            &:first-child{
+              padding-left: 0px;
+            }
+          }
+        }
+      }
     }
   }
 }
