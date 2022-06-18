@@ -76,6 +76,12 @@ ul {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 100% !important;
@@ -187,6 +193,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   right: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 9999999;
 }
 
 .navigation-body .navigation-close .navigation-close-btn {
@@ -263,9 +270,10 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .top-section {
   width: 100%;
+  background-repeat: no-repeat;
   height: 500px;
+  background-size: cover;
   background-position: center top;
-  background-size: 100% auto;
 }
 
 .top-section .section-body {
@@ -499,6 +507,92 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   padding: 70px 0px;
   text-align: center;
   background-color: white;
+  overflow: hidden;
+}
+
+.experience .ex-res-visible {
+  display: none !important;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .ex-res-visible {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 25px !important;
+  }
+}
+
+.experience .experience-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.5px;
+  color: #040921;
+}
+
+.experience .experience-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #040921;
+  opacity: 0.64;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .experience-desc {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+.experience .experience-icon {
+  background: linear-gradient(246.12deg, rgba(157, 80, 255, 0.04) 11.55%, rgba(88, 60, 240, 0.04) 104.8%);
+  border-radius: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.experience .experience-logo-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 35px;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .experience-logo-items {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    margin-top: 0;
+  }
+}
+
+.experience .experience-logo-items .experience-logo-item {
+  padding: 0px 4px;
+}
+
+.experience .experience-logo-items .experience-logo-item:first-child {
+  padding-left: 0px;
 }
 
 .experience .experience-items {
@@ -513,10 +607,37 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .experience-items .experience-item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .experience .experience-items .experience-item .experience-left {
   width: 500px;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .experience-items .experience-item .experience-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-text-emphasis: center;
+            text-emphasis: center;
+    text-align: -webkit-center;
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 1265px) {
+  .experience .experience-items .experience-item .experience-left {
+    width: 45%;
+  }
 }
 
 .experience .experience-items .experience-item .experience-left img {
@@ -533,7 +654,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .experience .experience-items .experience-item .experience-left .experience-img .img-pattern-1 {
   position: absolute;
-  width: 200px;
+  width: 40%;
   top: 0;
   left: 0;
   margin: 35px -65px;
@@ -541,27 +662,25 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .experience .experience-items .experience-item .experience-left .experience-img .img-pattern-2 {
   position: absolute;
-  width: 300px;
+  width: 70%;
   bottom: 0;
   right: 0;
 }
 
 .experience .experience-items .experience-item .experience-left .experience-img .img-pattern-3 {
   position: absolute;
-  width: 211px;
-  bottom: 0;
+  width: 55%;
+  top: 0;
   right: 0;
   z-index: 0;
-  margin: -95px;
 }
 
 .experience .experience-items .experience-item .experience-left .experience-img .img-pattern-2-bottom {
   position: absolute;
-  width: 165px;
-  bottom: 0;
-  right: 0;
+  width: 30%;
+  bottom: 40px;
+  right: -65px;
   z-index: 0;
-  margin: -70px;
 }
 
 .experience .experience-items .experience-item .experience-right {
@@ -623,5 +742,110 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .experience .experience-items .experience-item .experience-right .experience-logo-items .experience-logo-item:first-child {
   padding-left: 0px;
+}
+
+@media screen and (max-width: 670px) {
+  .experience .experience-items .experience-item .ex-bottom-right {
+    display: none;
+  }
+}
+
+.destination {
+  padding: 70px 0px;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.destination .destination-s-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.destination .destination-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #fff;
+  width: 51%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .destination .destination-title {
+    width: 95%;
+  }
+}
+
+.destination .destination-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+  /* the slides */
+}
+
+.destination .destination-items .slick-slide {
+  margin: 0 15px;
+}
+
+.destination .destination-items .destination-item {
+  width: 360px;
+  padding: 25px;
+  border-radius: 24px;
+  background-color: #fff;
+  text-align: left;
+}
+
+@media screen and (max-width: 400px) {
+  .destination .destination-items .destination-item {
+    width: 250px;
+  }
+}
+
+.destination .destination-items .destination-item img {
+  width: 100%;
+}
+
+.destination .destination-items .destination-item .destination-item-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #0D0D0D;
+  margin-top: 15px;
+}
+
+.destination .destination-items .destination-item .destination-item-text {
+  color: rgba(13, 13, 13, 0.5);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 15px;
+}
+
+.destination .destination-items .destination-item .destination-item-href {
+  margin-top: 10px;
+}
+
+.destination .destination-items .destination-item .destination-item-href a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 /*# sourceMappingURL=style.css.map */
