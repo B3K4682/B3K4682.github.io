@@ -438,6 +438,36 @@ header {
           letter-spacing: -0.32px;
           color: #FFFFFF;
           padding: 15px 30px;
+          position: relative;
+          appearance: none;
+          overflow: hidden;
+          cursor: pointer;
+          border: none;
+
+          span {
+            position: relative;
+            pointer-events: none;
+          }
+          
+          &::before {
+            --size: 0;
+        
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle closest-side, #ffffff, transparent);
+            transform: translate(-50%, -50%);
+            transition: width .2s ease, height .2s ease;
+            opacity: 0.7;
+            filter: blur(26.8px);
+          }
+          
+          &:hover::before {
+            --size: 80px;
+          }
         }
 
         .dropdown-text{
@@ -908,6 +938,21 @@ header {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
+  transition: 0.3s;
+
+  .slick-list{
+    padding-top: 40px !important;
+
+    .slick-active{
+      transform: translateY(-20px);
+      transition: 0.3s;
+    }
+
+    .slick-center{
+      transform: translateY(-35px);
+      transition: 0.3s;
+    }
+  }
 
   .destination-s-title{
     font-weight: 700;
@@ -941,6 +986,10 @@ header {
       /* the slides */
     .slick-slide {
       margin: 0 15px;
+
+      .slick-center {
+
+      }
     }
 
     .destination-item{
@@ -949,6 +998,7 @@ header {
       border-radius: 24px;
       background-color: #fff;
       text-align: left;
+      overflow-y: auto;
 
       @media screen and (max-width: 400px) {
         width: 250px;
@@ -978,6 +1028,8 @@ header {
 
       .destination-item-href {
         margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
         a{
           font-weight: 700;
           font-size: 16px;
@@ -1081,6 +1133,16 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+
+    .slick-list{
+      .slick-track{
+        .slick-active{
+          opacity: 1 !important;
+        }
+      }
+    }
+
+
     .slick-slide {
       margin: 0 15px;
     }
@@ -1092,6 +1154,7 @@ header {
       border: 1px solid #E2E4E8;
       border-radius: 12px;
       width: 370px;
+      opacity: 0.4;
 
       @media screen and (max-width: 400px) {
         width: 300px;

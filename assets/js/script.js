@@ -13,6 +13,16 @@ $(".top-picker-item").click(function () {
     $(this).toggleClass('picker-active');
 });
 
+document.querySelector('.browse-btn').onmousemove = (e) => {
+
+	const x = e.pageX - e.target.offsetLeft
+	const y = e.pageY - e.target.offsetTop
+
+	e.target.style.setProperty('--x', `${ x }px`)
+	e.target.style.setProperty('--y', `${ y }px`)
+	
+}
+
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         items: 4,
@@ -70,4 +80,14 @@ $('.comments-items').slick({
           }
         }
       ]
+});
+
+$(document).ready(function() {
+    const comments_items = $('.comments-item');
+    for(let i = 0; i < comments_items.length; i++) {
+        if(comments_items[i].hasAttribute("data-slick-index")) {
+            let CommentItem = comments_items[i].getAttribute("data-slick-index");
+            console.log(CommentItem);
+        }
+    }
 });

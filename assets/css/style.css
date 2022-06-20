@@ -495,6 +495,40 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   letter-spacing: -0.32px;
   color: #FFFFFF;
   padding: 15px 30px;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.top-section .section-body .top-filter-items .top-filter-item .browse-btn span {
+  position: relative;
+  pointer-events: none;
+}
+
+.top-section .section-body .top-filter-items .top-filter-item .browse-btn::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #ffffff, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width .2s ease, height .2s ease;
+  transition: width .2s ease, height .2s ease;
+  opacity: 0.7;
+  -webkit-filter: blur(26.8px);
+          filter: blur(26.8px);
+}
+
+.top-section .section-body .top-filter-items .top-filter-item .browse-btn:hover::before {
+  --size: 80px;
 }
 
 .top-section .section-body .top-filter-items .top-filter-item .dropdown-text {
@@ -1068,6 +1102,26 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.destination .slick-list {
+  padding-top: 40px !important;
+}
+
+.destination .slick-list .slick-active {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.destination .slick-list .slick-center {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .destination .destination-s-title {
@@ -1117,6 +1171,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   border-radius: 24px;
   background-color: #fff;
   text-align: left;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 400px) {
@@ -1149,6 +1204,12 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .destination .destination-items .destination-item .destination-item-href {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .destination .destination-items .destination-item .destination-item-href a {
@@ -1282,6 +1343,10 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   margin-top: 50px;
 }
 
+.comments .comments-items .slick-list .slick-track .slick-active {
+  opacity: 1 !important;
+}
+
 .comments .comments-items .slick-slide {
   margin: 0 15px;
 }
@@ -1292,6 +1357,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   border: 1px solid #E2E4E8;
   border-radius: 12px;
   width: 370px;
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 400px) {
