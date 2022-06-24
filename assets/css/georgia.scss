@@ -1,0 +1,124 @@
+.menu-items {
+    .menu-item {
+        &:nth-child(4) {
+        display: block !important;
+        }
+    }
+}
+
+.top-section-title{
+    line-height: 55px !important;
+    font-size: 48px;
+    font-weight: 700;
+
+    span{
+        font-weight: 400 !important;
+        font-size: 32px !important;
+        margin-bottom: 10px;
+    }
+}
+
+.top-section-desc{
+    margin: 40px 0;
+}
+
+.top-filter-items{
+    margin-bottom: 155px;
+}
+
+.type{
+    padding: 70px 0px;
+    background-color: #fff;
+
+    .type-title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        display: flex;
+        justify-content: center;
+        letter-spacing: -0.078px;
+        color: #040921;
+    }
+
+    .type-text{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        justify-content: center;
+        letter-spacing: -0.078px;
+    }
+
+    .type-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        .type-item{
+            background: linear-gradient(246.12deg, rgba(157, 80, 255, 0.03) 11.55%, rgba(88, 60, 240, 0.03) 104.8%);
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            width: 23%;
+            text-align: -webkit-center;
+            cursor: pointer;
+
+            &:hover > .item-href >a{
+                opacity: 1;
+            }
+
+            .type-img{
+                margin-top: 15px;
+                img{
+                }
+            }
+            
+            .item-title{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: rgba(4, 9, 33, 0.9);
+                margin-top: 20px;
+            }
+
+            .item-desc{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(13, 13, 13, 0.75);
+                margin-top: 30px;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .item-href{
+                margin: 30px 0 10px 0;
+                a{
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.book{
+    
+}

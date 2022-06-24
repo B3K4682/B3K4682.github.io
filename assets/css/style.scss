@@ -286,9 +286,9 @@ header {
 
 .top-section {
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center top !important;
 
   @media screen and (max-width: 975px) {
     height: 85vh;
