@@ -120,5 +120,12 @@
 }
 
 .book{
-    
+    text-align: center;
+    padding: 70px 0;
+
+
+    .book-items{
+        display: flex;
+        justify-content: space-between;
+    }
 }
