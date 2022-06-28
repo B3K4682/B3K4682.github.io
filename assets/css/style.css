@@ -13,7 +13,7 @@ ul {
 }
 
 body {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .default-btn {
@@ -460,7 +460,9 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   display: flex;
 }
 
-.top-section .section-body .top-filter-items .top-filter-item, .top-section .section-body .top-filter-items .top-filter-item, .top-section .section-body .top-filter-items .top-filter-arrow {
+.top-section .section-body .top-filter-items .top-filter-item,
+.top-section .section-body .top-filter-items .top-filter-item,
+.top-section .section-body .top-filter-items .top-filter-arrow {
   margin: 0px 20px;
 }
 
@@ -480,7 +482,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 }
 
 .top-section .section-body .top-filter-items .top-filter-item .browse-btn {
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   border-radius: 12px;
   text-align: center;
   -webkit-box-align: center;
@@ -492,7 +494,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.32px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px 30px;
   position: relative;
   -webkit-appearance: none;
@@ -510,7 +512,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .top-section .section-body .top-filter-items .top-filter-item .browse-btn::before {
   --size: 0;
-  content: '';
+  content: "";
   position: absolute;
   left: var(--x);
   top: var(--y);
@@ -519,8 +521,8 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   background: radial-gradient(circle closest-side, #ffffff, transparent);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: width .2s ease, height .2s ease;
-  transition: width .2s ease, height .2s ease;
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease;
   opacity: 0.7;
   -webkit-filter: blur(26.8px);
           filter: blur(26.8px);
@@ -555,7 +557,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 }
 
 .top-section .section-body .top-filter-items .top-filter-item .dropdown-toggle {
-  border: 1px solid #F0F1F3;
+  border: 1px solid #f0f1f3;
   border-radius: 10px;
   padding: 12px 10px;
   background-color: white;
@@ -635,7 +637,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   height: 30px;
   border-radius: 22px;
   background-color: white;
-  border: 1px solid #F0F1F3;
+  border: 1px solid #f0f1f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,8 +678,8 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.32px;
-  color: #FFFFFF;
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  color: #ffffff;
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   border-radius: 12px;
   padding: 17px 30px;
 }
@@ -701,8 +703,8 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   margin-top: -213px;
   width: 100%;
   height: 300px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(93.96%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 93.96%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(93.96%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 93.96%);
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   position: absolute;
@@ -1188,7 +1190,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  color: #0D0D0D;
+  color: #0d0d0d;
   margin-top: 15px;
 }
 
@@ -1215,7 +1217,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1268,7 +1270,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-size: 37px;
   line-height: 64px;
   letter-spacing: -1px;
-  color: #1D293F;
+  color: #1d293f;
   width: 40%;
   margin-top: 20px;
 }
@@ -1313,7 +1315,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 }
 
 .comments .slider-buttons button {
-  background: #FCFAFF;
+  background: #fcfaff;
   border-radius: 30px;
   position: unset;
   width: 50px;
@@ -1352,8 +1354,8 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 .comments .comments-items .comments-item {
   padding: 15px;
-  background: #FFFFFF;
-  border: 1px solid #E2E4E8;
+  background: #ffffff;
+  border: 1px solid #e2e4e8;
   border-radius: 12px;
   width: 370px;
   opacity: 0.4;
@@ -1393,7 +1395,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: #1D293F;
+  color: #1d293f;
   margin-left: 20px;
 }
 
@@ -1402,7 +1404,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #1D293F;
+  color: #1d293f;
   margin-top: 20px;
 }
 
@@ -1447,7 +1449,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 }
 
 .services .service-items .service-item:hover a {
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1570,7 +1572,7 @@ footer .footer-items {
 }
 
 footer .footer-items .footer-item .footer-account {
-  background: #262B35;
+  background: #262b35;
   border-radius: 34px;
   padding: 40px;
 }
@@ -1596,7 +1598,7 @@ footer .footer-items .footer-item .footer-account .account-title {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 15px;
 }
 
@@ -1605,13 +1607,13 @@ footer .footer-items .footer-item .footer-account .account-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.5;
   margin-bottom: 20px;
 }
 
 footer .footer-items .footer-item .footer-account .create-account {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 12px;
   padding: 15px 25px;
   font-size: 16px;
@@ -1620,7 +1622,7 @@ footer .footer-items .footer-item .footer-account .create-account {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  color: #262B35;
+  color: #262b35;
   display: inline-block;
 }
 

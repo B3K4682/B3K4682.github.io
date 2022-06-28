@@ -15,13 +15,23 @@ $(".top-picker-item").click(function () {
 
 document.querySelector('.browse-btn').onmousemove = (e) => {
 
-	const x = e.pageX - e.target.offsetLeft
-	const y = e.pageY - e.target.offsetTop
+    const x = e.pageX - e.target.offsetLeft
+    const y = e.pageY - e.target.offsetTop
 
-	e.target.style.setProperty('--x', `${ x }px`)
-	e.target.style.setProperty('--y', `${ y }px`)
-	
+    e.target.style.setProperty('--x', `${x}px`)
+    e.target.style.setProperty('--y', `${y}px`)
+
 }
+
+const button = document.querySelector(".footer-account");
+
+const readout = document.querySelector("p");
+
+button.addEventListener("mousemove", (e) => {
+  const { x, y } = button.getBoundingClientRect();
+  button.style.setProperty("--x", e.clientX - x);
+  button.style.setProperty("--y", e.clientY - y);
+});
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
@@ -62,6 +72,65 @@ $('.destination-items').slick({
     variableWidth: true
 });
 
+$('.adventure-items').slick({
+    dots: false,
+    arrows: true,
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    variableWidth: true,
+    responsive: [
+        {
+            breakpoint: 676,
+            settings: {
+                arrows: false,
+            }
+        }
+    ]
+});
+
+if ($(window).width() < 640) {
+    $('.type-items').slick({
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+}
+
+if ($(window).width() < 760) {
+    $('.stay-items').slick({
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 401,
+                settings: {
+                    variableWidth: false,
+                }
+            }
+        ]
+    });
+}
+
+$('.book-img').slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+});
+
+$('.stay-img').slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+});
+
 $('.comments-items').slick({
     loop: false,
     infinite: false,
@@ -74,20 +143,10 @@ $('.comments-items').slick({
     nextArrow: $('.slick-next'),
     responsive: [
         {
-          breakpoint: 676,
-          settings: {
-            centerMode: true,
-          }
+            breakpoint: 676,
+            settings: {
+                centerMode: true,
+            }
         }
-      ]
-});
-
-$(document).ready(function() {
-    const comments_items = $('.comments-item');
-    for(let i = 0; i < comments_items.length; i++) {
-        if(comments_items[i].hasAttribute("data-slick-index")) {
-            let CommentItem = comments_items[i].getAttribute("data-slick-index");
-            console.log(CommentItem);
-        }
-    }
+    ]
 });
