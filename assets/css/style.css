@@ -97,6 +97,12 @@ header {
   width: 100%;
 }
 
+header .header-items .header-item .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header .header-items .header-item .logo .logo-text {
   margin-top: 13px;
   margin-left: 5px;
@@ -291,7 +297,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
             box-shadow: 0px 0px 24px rgba(4, 9, 33, 0.08);
     border-radius: 0px;
     padding: 20px 0px;
-    z-index: 10;
+    z-index: 99999999999999999999;
   }
 }
 
@@ -1783,5 +1789,9 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu-item:nth-child(3) {
+  display: block !important;
 }
 /*# sourceMappingURL=style.css.map */

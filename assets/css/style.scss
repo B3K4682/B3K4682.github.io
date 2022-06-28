@@ -89,6 +89,7 @@ header {
   .header-items {
     .header-item {
       .logo {
+        display: flex;
         .logo-text {
           margin-top: 13px;
           margin-left: 5px;
@@ -268,7 +269,7 @@ header {
     box-shadow: 0px 0px 24px rgba(4, 9, 33, 0.08);
     border-radius: 0px;
     padding: 20px 0px;
-    z-index: 10;
+    z-index: 99999999999999999999;
   }
 
   .bar-items {
@@ -1525,4 +1526,9 @@ footer {
       }
     }
   }
+}
+
+
+.menu-item:nth-child(3){
+  display: block !important;
 }
