@@ -370,6 +370,15 @@ label{
         svg > g > .svg-w-stroke {
           stroke: #fff !important;
         }
+
+        g > path {
+          stroke: #fff !important;
+        }
+
+        .train-light{
+          stroke: unset !important;
+          fill: #fff !important;
+        }
       }
 
       .top-picker-item {
