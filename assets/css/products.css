@@ -1,0 +1,111 @@
+header {
+  padding: 40px 0px 30px 0;
+  position: absolute;
+  width: 100%;
+}
+
+header .header-items .header-item .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-items .header-item .logo .logo-text {
+  margin-top: 13px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-items .header-item .logo .logo-text {
+    width: 65px;
+    margin-left: 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .header-items .header-item .logo .logo-icon {
+    width: 40px;
+  }
+}
+
+header .header-items .header-item .menu-items {
+  z-index: 9999999;
+  position: relative;
+}
+
+header .header-items .header-item .menu-items .menu-item {
+  margin: 0px 12px;
+  -ms-flex-item-align: self-end;
+      -ms-grid-row-align: self-end;
+      align-self: self-end;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-items .header-item .menu-items .menu-item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .header-items .header-item .menu-items .menu-item:nth-child(3) {
+    display: none;
+  }
+}
+
+header .header-items .header-item .menu-items .menu-item:nth-child(4) {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-items .header-item .menu-items .menu-item:nth-child(4) {
+    display: block;
+  }
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown a {
+  color: #fff;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown a .dropdown-arrow {
+  margin-left: 5px;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown a:after {
+  display: none !important;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown .dropdown-toggle:hover {
+  border-color: white;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown .dropdown-menu {
+  margin-top: 10px;
+}
+
+header .header-items .header-item .menu-items .menu-item .dropdown .dropdown-menu a {
+  color: #000;
+}
+
+header .header-items .header-item .menu-items .menu-item .burger-btn {
+  border: 0;
+  background-color: unset;
+}
+
+header .header-items .header-item .menu-items .menu-item .burger-btn div {
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  border-radius: 15px;
+  margin: 5px 0px;
+}
+
+header {
+  background-color: red;
+}
+/*# sourceMappingURL=products.css.map */
