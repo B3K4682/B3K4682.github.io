@@ -1815,4 +1815,13 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
 .menu-item:nth-child(3) {
   display: block !important;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 450px) {
+  .menu-item:first-child {
+    display: none !important;
+  }
+  .menu-item:nth-child(3) {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=seo.css.map */

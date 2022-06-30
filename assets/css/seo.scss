@@ -1,0 +1,11 @@
+@import "./style.scss";
+
+@media (max-width: 450px) {
+  .menu-item:first-child {
+    display: none !important;
+  }
+
+  .menu-item:nth-child(3) {
+    display: none !important;
+  }
+}
