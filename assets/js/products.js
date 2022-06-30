@@ -8,5 +8,16 @@ $(".products-slider").slick({
     arrows: true,
     centerMode: true,
     prevArrow: $(".slick-prev"),
-    nextArrow: $(".slick-next")
+    nextArrow: $(".slick-next"),
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                centerMode: false,
+            },
+        },
+    ],
 });
