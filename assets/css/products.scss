@@ -36,16 +36,49 @@ body {
         margin: 0 27px 0 0;
     }
   
-    /* the parent */
     .slick-list {
         margin: 0 -27px 0 0;
     }
-    .img-div {
-        width: 640px;
-        img {
-            @media(max-width: 1280) {
-                width: 25%;
+
+    .slick-prev:before, .slick-next:before{
+        color: red;
+        z-index: 10000;
+    }
+
+    .slick-dots {
+        bottom: -130px;
+        li {
+            button {
+                &:hover {
+                    &::before {
+                        color: #FFFFFF;
+                    }
+                }
+                &::before {
+                    font-size: 10px;
+                    color: #040921;
+                    
+                }
             }
+            &.slick-active {
+                button {
+                    &::before {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .img-div {
+        height: auto; 
+        width: auto; 
+        max-width: 640px; 
+        max-height: 560px;
+        
+        img {
+            width: 100%;
+            height: 560px;
         }
     }
 }
