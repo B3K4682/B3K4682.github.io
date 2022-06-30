@@ -7,4 +7,6 @@ $(".products-slider").slick({
     dots: true,
     arrows: true,
     centerMode: true,
+    prevArrow: $(".slick-prev"),
+    nextArrow: $(".slick-next")
 });
