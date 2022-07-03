@@ -123,7 +123,7 @@ window.onload = () => {
 
     popoutHead.addEventListener("touchmove", (e) => {
         let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 25;
+        let height = window.screen.height - touchLocation.clientY + 10;
 
         if (height < window.screen.height) {
             box.style.height = `${height}px`;
