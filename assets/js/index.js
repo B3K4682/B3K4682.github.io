@@ -116,6 +116,24 @@ $(".comments-items").slick({
     ],
 });
 
+document.querySelector(".browse-btn").onmousemove = (e) => {
+    const x = e.pageX - e.target.offsetLeft;
+    const y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty("--x", `${x}px`);
+    e.target.style.setProperty("--y", `${y}px`);
+};
+
+const button = document.querySelector(".footer-account");
+
+const readout = document.querySelector("p");
+
+button.addEventListener("mousemove", (e) => {
+    const { x, y } = button.getBoundingClientRect();
+    button.style.setProperty("--x", e.clientX - x);
+    button.style.setProperty("--y", e.clientY - y);
+});
+
 window.onload = () => {
     const popout = document.getElementsByClassName("popout")[0];
     let box = document.querySelector(".popout-content");
@@ -134,24 +152,23 @@ window.onload = () => {
         const pos = parseInt(box.style.height);
         if (pos < window.screen.height / 3) {
             popout.classList.add("hidden");
+            document.body.style.overflow = "auto";
+            box.style.transition = "height 0.3s ease-in-out";
+            setTimeout(() => {
+                box.style.transition = "none";
+            }, 300);
         }
     });
+
+    const searchIcon = document.querySelector(".search-icon");
+
+    searchIcon.addEventListener("click", () => {
+        popout.classList.remove("hidden");
+        box.style.height = "70%";
+        document.body.style.overflow = "hidden";
+        box.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box.style.transition = "none";
+        }, 300);
+    });
 };
-
-document.querySelector(".browse-btn").onmousemove = (e) => {
-    const x = e.pageX - e.target.offsetLeft;
-    const y = e.pageY - e.target.offsetTop;
-
-    e.target.style.setProperty("--x", `${x}px`);
-    e.target.style.setProperty("--y", `${y}px`);
-};
-
-const button = document.querySelector(".footer-account");
-
-const readout = document.querySelector("p");
-
-button.addEventListener("mousemove", (e) => {
-    const { x, y } = button.getBoundingClientRect();
-    button.style.setProperty("--x", e.clientX - x);
-    button.style.setProperty("--y", e.clientY - y);
-});

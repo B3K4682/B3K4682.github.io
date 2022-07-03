@@ -1,6 +1,10 @@
+@import './font';
+
 body {
+    // position: relative;
     overflow: hidden;
 }
+
 
 .popout {
     width: 100%;
@@ -10,11 +14,12 @@ body {
     background-color: rgba(0, 0, 0, 0.72);
     z-index: 10000000000;
     display: none;
+    transition: all 300ms ease-in-out;
     .popout-content {
         border-top-left-radius: 20px !important;
         border-top-right-radius: 20px !important;   
         width: 100%;
-        height: 50%;
+        height: 70%;
         background: white;
         position: fixed;
         bottom: 0;
@@ -27,6 +32,81 @@ body {
             justify-content: center;
             border-top-left-radius: 20px !important;
             border-top-right-radius: 20px !important;
+        }
+        .popout-body {
+            width: 100%;
+            height: 100%;
+            overflow-x: scroll;
+            // background-color: black;
+            .popout-wrapper {
+                margin: auto;
+                // background-color: red;
+                width: 90%;
+                .popout-body-search {
+                    width: 100%;
+                    height: 10%;
+                    padding: 10px 0;
+                    .popout-body-search-text {
+                        p {
+                            margin: 0;
+                            color: #040921BF;
+                            font-size: 14px;
+                        }
+                    }
+                    .popout-body-search-input {
+                        width: 100%;
+                        // background-color: purple;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        input {
+                            border: none;
+                            outline: none;
+                            &::placeholder {
+                                color: #040921;
+
+                            }
+                        }
+                        a {
+                            color: #9D50FF;
+                        }
+                    }
+                }
+                .popout-body-results {
+                    // background-color: green;
+                    margin-top: 10px;
+                    .popout-body-result-title {
+                        h1{
+                            font-weight: bold;
+                            font-size: 14px;
+                        }
+                    }
+                    .popout-body-result-items {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        // height: 100%;
+                        justify-content: space-evenly;
+                        .popout-body-result-item {
+                            // border: 1px solid red;
+                            margin: 5px 0;
+                            display: flex;
+                            gap: 10px;
+                            svg {
+                                margin-top: 2px;
+                            }
+                            p {
+                                transition: all 300ms ease-in-out;
+                                color: #828490;
+                                cursor: pointer;
+                                &:hover {
+                                    color: #040921;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
