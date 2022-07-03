@@ -137,3 +137,21 @@ window.onload = () => {
         }
     });
 };
+
+document.querySelector(".browse-btn").onmousemove = (e) => {
+    const x = e.pageX - e.target.offsetLeft;
+    const y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty("--x", `${x}px`);
+    e.target.style.setProperty("--y", `${y}px`);
+};
+
+const button = document.querySelector(".footer-account");
+
+const readout = document.querySelector("p");
+
+button.addEventListener("mousemove", (e) => {
+    const { x, y } = button.getBoundingClientRect();
+    button.style.setProperty("--x", e.clientX - x);
+    button.style.setProperty("--y", e.clientY - y);
+});
