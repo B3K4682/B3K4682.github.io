@@ -137,12 +137,6 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .popout {
-    display: block !important;
-  }
-}
-
 .popout .popout-content {
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
@@ -159,6 +153,16 @@ body {
   width: 100%;
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
+}
+
+.popout-active {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .popout-active {
+    display: block !important;
+  }
 }
 
 .popout.hidden {

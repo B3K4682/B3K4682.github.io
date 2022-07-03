@@ -11,9 +11,6 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 10000000000;
     display: none;
-    @media (max-width: 768px) {
-        display: block !important;
-    }
     .popout-content {
         border-top-left-radius: 20px !important;
         border-top-right-radius: 20px !important;   
@@ -29,6 +26,14 @@ body {
             border-top-left-radius: 20px !important;
             border-top-right-radius: 20px !important;  
         }
+    }
+}
+
+.popout-active{
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block !important;
     }
 }
 
