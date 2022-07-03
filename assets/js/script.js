@@ -1,14 +1,12 @@
 $("#burger-btn").on("click", () => {
     $(".navigation-body").css("right", "0%");
     $("#body").css("overflow", "hidden");
-    console.log("zd");
 });
 
 $("#navigation-close-btn").on("click", () => {
     $(".navigation-body").css("right", "100%");
     $("#body").css("overflow", "auto");
 });
-
 
 $(".top-picker-item").click(function () {
     $(this).toggleClass("picker-active");
@@ -149,3 +147,25 @@ $(".comments-items").slick({
         },
     ],
 });
+
+window.onload = () => {
+    const popout = document.getElementsByClassName("popout")[0];
+    let box = document.querySelector(".popout-content");
+    let popoutHead = document.querySelector(".popout-head");
+
+    popoutHead.addEventListener("touchmove", (e) => {
+        let touchLocation = e.targetTouches[0];
+        let height = window.screen.height - touchLocation.clientY + 25;
+
+        if (height < window.screen.height) {
+            box.style.height = `${height}px`;
+        }
+    });
+
+    popoutHead.addEventListener("touchend", (e) => {
+        const pos = parseInt(box.style.height);
+        if (pos < window.screen.height / 3) {
+            popout.classList.add("hidden");
+        }
+    });
+};

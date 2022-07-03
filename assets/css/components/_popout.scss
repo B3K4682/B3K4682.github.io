@@ -1,24 +1,42 @@
+body {
+    position: relative;
+    // overflow: hidden;
+}
+
 .popout {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.72);
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 999999999998;
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block !important;
-  }
-
-  .popout-body{
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 80vh;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    left: 0;
-  }
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10000000000;
+    display: none;
+    @media (max-width: 768px) {
+        display: block !important;
+    }
+    .popout-content {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;   
+        width: 100%;
+        height: 50%;
+        background: red;
+        position: fixed;
+        bottom: 0;
+        .popout-head {
+            background: green;
+            height: 50px;
+            width: 100%;
+            border-top-left-radius: 20px !important;
+            border-top-right-radius: 20px !important;  
+        }
+    }
+}
+
+.popout.hidden {
+    background: none;
+    pointer-events: none;
+    .popout-content {
+        height: 0% !important;
+        transition: all 300ms ease-in-out;
+    }
 }
