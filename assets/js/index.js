@@ -135,7 +135,7 @@ button.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    popout(), popout2(), popout3();
+    popout(), popout2(), popout3(), popout4();
 });
 
 function popout() {
@@ -251,6 +251,56 @@ function popout3() {
         box3.style.transition = "height 0.3s ease-in-out";
         setTimeout(() => {
             box3.style.transition = "none";
+        }, 300);
+    });
+}
+
+function popout4() {
+    const popout4 = document.getElementsByClassName("popout4")[0];
+    let box4 = document.querySelector(".popout4-content");
+    let popoutHead4 = document.querySelector(".popout4-head");
+
+    const popout3 = document.getElementsByClassName("popout3")[0];
+    let box3 = document.querySelector(".popout3-content");
+    let popoutHead3 = document.querySelector(".popout3-head");
+
+    popoutHead4.addEventListener("touchmove", (e) => {
+        let touchLocation = e.targetTouches[0];
+        let height = window.screen.height - touchLocation.clientY + 10;
+
+        if (height < window.screen.height) {
+            box4.style.height = `${height}px`;
+        }
+    });
+
+    popoutHead4.addEventListener("touchend", (e) => {
+        const pos = parseInt(box4.style.height);
+        if (pos < window.screen.height / 3) {
+            popout4.classList.add("hidden");
+            document.body.style.overflow = "auto";
+            box4.style.transition = "height 0.3s ease-in-out";
+            setTimeout(() => {
+                box3.style.transition = "none";
+            }, 300);
+        }
+    });
+
+    const searchButton = document.querySelector(".search-button");
+
+    searchButton.addEventListener("click", () => {
+        popout3.classList.add("hidden");
+        document.body.style.overflow = "auto";
+        box3.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box3.style.transition = "none";
+        }, 300);
+
+        popout4.classList.remove("hidden");
+        box4.style.height = "70%";
+        document.body.style.overflow = "hidden";
+        box4.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box4.style.transition = "none";
         }, 300);
     });
 }
