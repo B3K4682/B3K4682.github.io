@@ -2035,4 +2035,127 @@ body {
   margin: 0;
   color: #7444F6;
 }
+
+.surroundings-section .surroundings-title h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #040921;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.surroundings-section .surroundings-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-left {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 430px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-left h1 {
+  color: #040921;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-left h1 svg {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-left .surroundings-body-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 430px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-attractions h1 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-attractions h1 svg {
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-attractions .surroundings-attractions-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-attractions .surroundings-attractions-item p {
+  margin: 0;
+  padding: 7px 0;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-airport h1 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-airport h1 svg {
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.surroundings-section .surroundings-body .surroundings-body-right .surroundings-body-airport .surroundings-attractions-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 /*# sourceMappingURL=products.css.map */
