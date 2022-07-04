@@ -21,3 +21,10 @@ $(".slider-items").slick({
         },
     ],
 });
+
+$(".book-img").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+});

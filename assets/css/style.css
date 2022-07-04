@@ -22,6 +22,12 @@ header {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px 0px 0px 0;
+  }
+}
+
 header .header-items .header-item .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,10 +139,6 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   font-family: Sk-Modernist;
   src: url("../../font/Sk-Modernist-Bold.otf");
   font-weight: bold;
-}
-
-body {
-  overflow: hidden;
 }
 
 .popout {
