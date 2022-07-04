@@ -108,6 +108,26 @@ label {
   margin-bottom: 20px;
 }
 
+.input_error {
+  border-color: rgba(222, 19, 19, 0.7);
+}
+
+.error-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.32px;
+  color: #DE1313;
+  margin: 10px;
+}
+
 header {
   padding: 40px 0px 30px 0;
   position: absolute;
@@ -2605,6 +2625,24 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
   margin: 5% 0;
   max-height: 600px;
   z-index: 999999999999;
+}
+
+@media (max-width: 1000px) {
+  .modal-vv .modal-vv-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-vv .modal-vv-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-vv .modal-vv-content {
+    width: 90%;
+  }
 }
 
 .modal-vv .modal-vv-content .password-input {

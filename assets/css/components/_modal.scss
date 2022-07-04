@@ -32,6 +32,18 @@
         max-height: 600px;
         z-index: 999999999999;
 
+        @media (max-width: 1000px) {
+            width: 60%;
+        }
+
+        @media (max-width: 600px) {
+            width: 80%;
+        }
+
+        @media (max-width: 400px) {
+            width: 90%;
+        }
+
         .password-input{
             position: relative;
 
