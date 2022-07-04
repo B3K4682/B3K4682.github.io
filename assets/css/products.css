@@ -1827,4 +1827,104 @@ body {
 .nearby-section .nearby-items .nearby-item p span {
   color: black;
 }
+
+.location-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.location-section .container .location-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.location-section .container .location-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.location-section .container .location-body .location-map iframe {
+  border-radius: 24px;
+}
+
+.location-section .container .location-body .location-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.location-section .container .location-body .location-options h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.location-section .container .location-body .location-options p {
+  font-size: 16px;
+}
+
+.location-section .container .location-body .location-options .location-options-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item {
+  border: 1px solid rgba(4, 9, 33, 0.16);
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left p {
+  margin: 0 10px;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right p {
+  margin: 0;
+}
 /*# sourceMappingURL=products.css.map */
