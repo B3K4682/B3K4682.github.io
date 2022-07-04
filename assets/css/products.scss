@@ -1514,3 +1514,87 @@ body {
         }
     }
 }
+
+.surroundings-section {
+    .surroundings-title {
+        h1 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #040921;
+            margin-left: 15px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+    }
+    .surroundings-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        .surroundings-body-left {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            height: 430px;
+            h1 {
+                color: #040921;
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                svg {
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                }
+            }
+            .surroundings-body-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .surroundings-body-right {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 430px;
+            .surroundings-body-attractions {
+                h1 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    svg {
+                        margin-bottom: 2px;
+                        margin-right: 5px;
+                    }
+                }
+                .surroundings-attractions-item {
+                    display: flex;
+                    // background: red;
+                    align-items: center;
+                    justify-content: space-between;
+                    p {
+                        margin: 0;
+                        padding: 7px 0;
+                    }
+                }
+            }
+            .surroundings-body-airport {
+                h1 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    svg {
+                        margin-bottom: 2px;
+                        margin-right: 5px;
+                    }
+                }
+                .surroundings-attractions-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
