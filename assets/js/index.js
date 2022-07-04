@@ -134,7 +134,11 @@ button.addEventListener("mousemove", (e) => {
     button.style.setProperty("--y", e.clientY - y);
 });
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
+    popout(), popout2(), popout3();
+});
+
+function popout() {
     const popout = document.getElementsByClassName("popout")[0];
     let box = document.querySelector(".popout-content");
     let popoutHead = document.querySelector(".popout-head");
@@ -171,4 +175,82 @@ window.onload = () => {
             box.style.transition = "none";
         }, 300);
     });
-};
+}
+
+function popout2() {
+    const popout2 = document.getElementsByClassName("popout2")[0];
+    let box2 = document.querySelector(".popout2-content");
+    let popoutHead2 = document.querySelector(".popout2-head");
+
+    popoutHead2.addEventListener("touchmove", (e) => {
+        let touchLocation = e.targetTouches[0];
+        let height = window.screen.height - touchLocation.clientY + 10;
+
+        if (height < window.screen.height) {
+            box2.style.height = `${height}px`;
+        }
+    });
+
+    popoutHead2.addEventListener("touchend", (e) => {
+        const pos = parseInt(box2.style.height);
+        if (pos < window.screen.height / 3) {
+            popout2.classList.add("hidden");
+            document.body.style.overflow = "auto";
+            box2.style.transition = "height 0.3s ease-in-out";
+            setTimeout(() => {
+                box2.style.transition = "none";
+            }, 300);
+        }
+    });
+
+    const heartIcon = document.querySelector(".heart-icon");
+
+    heartIcon.addEventListener("click", () => {
+        popout2.classList.remove("hidden");
+        box2.style.height = "70%";
+        document.body.style.overflow = "hidden";
+        box2.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box2.style.transition = "none";
+        }, 300);
+    });
+}
+
+function popout3() {
+    const popout3 = document.getElementsByClassName("popout3")[0];
+    let box3 = document.querySelector(".popout3-content");
+    let popoutHead3 = document.querySelector(".popout3-head");
+
+    popoutHead3.addEventListener("touchmove", (e) => {
+        let touchLocation = e.targetTouches[0];
+        let height = window.screen.height - touchLocation.clientY + 10;
+
+        if (height < window.screen.height) {
+            box3.style.height = `${height}px`;
+        }
+    });
+
+    popoutHead3.addEventListener("touchend", (e) => {
+        const pos = parseInt(box3.style.height);
+        if (pos < window.screen.height / 3) {
+            popout3.classList.add("hidden");
+            document.body.style.overflow = "auto";
+            box3.style.transition = "height 0.3s ease-in-out";
+            setTimeout(() => {
+                box3.style.transition = "none";
+            }, 300);
+        }
+    });
+
+    const notificationIcon = document.querySelector(".notification-icon");
+
+    notificationIcon.addEventListener("click", () => {
+        popout3.classList.remove("hidden");
+        box3.style.height = "70%";
+        document.body.style.overflow = "hidden";
+        box3.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box3.style.transition = "none";
+        }, 300);
+    });
+}
