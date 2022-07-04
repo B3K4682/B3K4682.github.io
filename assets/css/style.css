@@ -14,6 +14,7 @@ ul {
 
 body {
   background: #e5e5e5;
+  font-family: 'Sk-Modernist', sans-serif !important;
 }
 
 header {
@@ -131,14 +132,20 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 
 @font-face {
   font-family: Sk-Modernist;
-  src: url("../../font/Sk-Modernist-Regular.otf");
+  src: url("../../font/Sk-Modernist-Bold.woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: Sk-Modernist;
-  src: url("../../font/Sk-Modernist-Bold.otf");
+  src: url("../../font/Sk-Modernist-Bold.woff2");
   font-weight: bold;
+}
+
+@font-face {
+  font-family: Sk-Modernist;
+  src: url("../../font/Sk-Modernist-Mono.woff2");
+  font-weight: initial;
 }
 
 .popout {

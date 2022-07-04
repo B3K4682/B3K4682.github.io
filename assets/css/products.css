@@ -1773,10 +1773,6 @@ body {
   }
 }
 
-.nearby-section .nearby-title {
-  padding: 20px 0;
-}
-
 .nearby-section .nearby-title h2 {
   font-size: 24px;
   font-weight: bold;
@@ -1814,7 +1810,17 @@ body {
 
 .nearby-section .nearby-items .nearby-item h1 {
   margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
   font-size: 16px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
 }
 
 .nearby-section .nearby-items .nearby-item p {
@@ -1826,6 +1832,7 @@ body {
 
 .nearby-section .nearby-items .nearby-item p span {
   color: black;
+  font-weight: 400;
 }
 
 .location-section {
