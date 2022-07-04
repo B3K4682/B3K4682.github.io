@@ -1357,7 +1357,6 @@ body {
         display: none;
     }
     .nearby-title {
-        padding: 20px 0;
         h2 {
             font-size: 24px;
             font-weight: bold;
@@ -1378,7 +1377,13 @@ body {
             }
             h1 {
                 margin-top: 10px;
+                font-style: normal;
+                font-weight: 700;
                 font-size: 16px;
+                line-height: 19px;
+                display: flex;
+                align-items: center;
+                color: #000000;
             }
             p {
                 font-weight: 700;
@@ -1387,6 +1392,7 @@ body {
                 color: rgba(0, 0, 0, 0.5);
                 span {
                     color: black;
+                    font-weight: 400;
                 }
             }
         }
