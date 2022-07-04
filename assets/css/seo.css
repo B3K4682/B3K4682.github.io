@@ -38,6 +38,50 @@ body {
   font-family: 'Sk-Modernist', sans-serif !important;
 }
 
+input {
+  background: #FFFFFF;
+  border: 1px solid rgba(4, 9, 33, 0.08);
+  border-radius: 16px;
+  padding: 12px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #040921;
+}
+
+label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.078px;
+  color: #040921;
+  opacity: 0.8;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.input-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 header {
   padding: 40px 0px 30px 0;
   position: absolute;
@@ -2642,6 +2686,95 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal-vv {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999999999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-vv .modal-vv-content {
+  background: #FAFAFA;
+  border: 1px solid rgba(4, 9, 33, 0.08);
+  border-radius: 32px;
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 7% 0;
+}
+
+.modal-vv .modal-vv-content .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.2;
+}
+
+.modal-vv .modal-vv-content .modal-vv-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.078px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.modal-vv .modal-vv-content .password-attrs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: -0.078px;
+  color: #040921;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
+.modal-vv .modal-vv-content .password-attrs span {
+  margin-left: 7px;
 }
 
 .menu-item:nth-child(3) {

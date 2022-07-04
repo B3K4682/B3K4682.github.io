@@ -19,6 +19,59 @@ body {
   font-family: 'Sk-Modernist', sans-serif !important;
 }
 
+input{
+  background: #FFFFFF;
+  border: 1px solid rgba(4, 9, 33, 0.08);
+  border-radius: 16px;
+  padding: 12px;
+  transition: 0.2s;
+
+  &:focus{
+    outline: none;
+    border: 1px solid #040921;
+  }
+}
+
+label{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.078px;
+  color: #040921;
+  opacity: 0.8;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.submit-btn{
+  width: 100%;
+  border: 0;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.32px;
+  padding: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+.input-section{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @import './components/header';
 @import './components/popout';
 
@@ -1229,6 +1282,8 @@ body {
 }
 
 @import './components/footer';
+
+@import './components/modal';
 
 .menu-item:nth-child(3){
   display: block !important;
