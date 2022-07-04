@@ -1840,13 +1840,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: red;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 50px;
+}
+
+.location-section .container .location-title {
+  padding: 10px 0;
+  margin-left: 5px;
 }
 
 .location-section .container .location-title h2 {
@@ -1858,10 +1863,41 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .location-section .container .location-body .location-map iframe {
   border-radius: 24px;
+}
+
+@media (max-width: 1400px) {
+  .location-section .container .location-body .location-map iframe {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .location-section .container .location-body .location-map iframe {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-map iframe {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .location-section .container .location-body .location-options {
@@ -1909,6 +1945,24 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item {
+    border: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1918,8 +1972,22 @@ body {
           align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left svg {
+    border: 1px solid rgba(4, 9, 33, 0.16);
+    padding: 3px;
+    border-radius: 8px;
+  }
+}
+
 .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left p {
   margin: 0 10px;
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-left p {
+    margin-left: 25px;
+  }
 }
 
 .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right {
@@ -1929,9 +1997,42 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 50px;
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right#time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right#time {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right#time p:nth-child(2) {
+  opacity: 0.7;
+}
+
+@media (max-width: 1000px) {
+  .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right#time p:nth-child(2) {
+    margin-left: 3px;
+  }
 }
 
 .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right p {
   margin: 0;
+  color: #7444F6;
 }
 /*# sourceMappingURL=products.css.map */
