@@ -1398,3 +1398,119 @@ body {
         }
     }
 }
+
+
+.location-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    .container {
+        .location-title {
+            padding: 10px 0;
+            margin-left: 5px;
+            h2 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        .location-body {
+            display: flex;
+            justify-content: space-between;
+            @media(max-width: 1000px) {
+                flex-direction: column;
+            }
+            .location-map {
+                iframe {
+                    border-radius: 24px;
+                    @media(max-width: 1400px) {
+                        width: 600px;
+                    }
+                    
+                    @media(max-width: 1280px) {
+                        width: 500px;
+                    }
+                    @media(max-width: 1000px) {
+                        width: 100%;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+
+            .location-options {
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                p {
+                    font-size: 16px;
+                }
+                .location-options-items {
+                    display: flex;
+                    flex-direction: column;
+                    .location-options-item {
+                        border: 1px solid rgba(4, 9, 33, 0.16);
+                        @media(max-width: 1000px) {
+                            border: none;
+                        }
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 10px;
+                        margin-bottom: 10px;
+                        @media(max-width: 1000px) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .location-options-item-left {
+                            display: flex;
+                            align-items: center;
+                            svg {
+                                @media(max-width: 1000px) {
+                                    border: 1px solid rgba(4, 9, 33, 0.16);
+                                    padding: 3px;
+                                    border-radius: 8px;
+                                }
+                            }
+                            p {
+                                margin: 0 10px;
+                                @media(max-width: 1000px) {
+                                    margin-left: 25px;
+                                }
+                            }
+                        }
+                        .location-options-item-right {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 50px;
+                            &#time {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                @media(max-width: 1000px) {
+                                    align-items: flex-start;
+                                }
+                                p {
+                                    &:nth-child(2) {
+                                        opacity: 0.7;
+                                        @media(max-width: 1000px) {
+                                            margin-left: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                margin: 0;
+                                color: #7444F6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
