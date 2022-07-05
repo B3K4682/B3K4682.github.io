@@ -1,0 +1,89 @@
+.pagination {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.pagination.center {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pagination .pagination-info {
+  margin: 15px 0;
+}
+
+.pagination .pagination-info .pagination-info-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.pagination .pagination-list {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination .pagination-list .pagination-item {
+  color: #040921;
+}
+
+.pagination .pagination-list .pagination-item .pagination-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #040921;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination .pagination-list .pagination-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.pagination .pagination-list .pagination-item.active .pagination-link {
+  background: #040921;
+  border: 1px solid rgba(4, 9, 33, 0.04);
+  color: #ffffff;
+}
+/*# sourceMappingURL=paginations.css.map */
