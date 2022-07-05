@@ -108,6 +108,23 @@ label {
   margin-bottom: 20px;
 }
 
+select {
+  background: #FFFFFF;
+  border: 1px solid rgba(4, 9, 33, 0.08);
+  border-radius: 16px;
+  padding: 12px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #040921;
+}
+
 .input_error {
   border-color: rgba(222, 19, 19, 0.7);
 }

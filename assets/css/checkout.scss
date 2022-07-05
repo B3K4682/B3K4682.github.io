@@ -1,0 +1,242 @@
+header{
+    padding: 25px 0px 10px 0 !important;
+}
+
+body{
+    color: #fff !important;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+section{
+    padding-bottom: 200px;
+
+    .checkout-content{
+        margin-top: 25px;
+
+        .checkout-top{
+            .page{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                color: #040921;
+                opacity: 0.5;
+                margin-bottom: 15px;
+            }
+
+            .back{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                color: #040921;
+
+                svg{
+                    margin-right: 5px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .checkout-items{
+            display: flex;
+            justify-content: space-between;
+            .checkout-item{
+                &:first-child{
+                    width: 64%;
+                }
+
+                &:last-child{
+                    width: 34%;
+                    background-color: red;
+                }
+
+                .modal-vv-content{
+                    background: #FAFAFA;
+                    border: 1px solid rgba(4, 9, 33, 0.08);
+                    border-radius: 32px;
+                    border-radius: 32px;
+                    padding: 30px;
+                    position: relative;
+                    overflow: auto;
+                    z-index: 999999999999;
+            
+                    @media (max-width: 1000px) {
+                        width: 60%;
+                    }
+            
+                    @media (max-width: 600px) {
+                        width: 80%;
+                    }
+            
+                    @media (max-width: 400px) {
+                        width: 90%;
+                    }
+            
+                    .password-input{
+                        position: relative;
+            
+                        svg{
+                            position: absolute;
+                            right: 20px;
+                            top: 41px;
+                        }
+                    }
+            
+                    .close{
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        opacity: 0.2;
+                    }
+            
+                    .modal-vv-title{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: -0.078px;
+                        color: #000000;
+                        margin-bottom: 30px;
+                    }
+            
+                    .password-attrs{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        display: flex;
+                        flex-direction: column;
+                        letter-spacing: -0.078px;
+                        color: #040921;
+                        opacity: 0.8;
+                        margin-left: 10px;
+                        span{
+                            margin-left: 7px;
+                        }
+                    }
+            
+                    .continue{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 26px;
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                        color: #040921;
+                        opacity: 0.24;
+                        display: flex;
+                        justify-content: center;
+            
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 25%;
+                            height: 1px;
+                            background: #040921;
+                            opacity: 0.24;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                        }
+            
+                        &::before{
+                            content: "";
+                            display: block;
+                            width: 25%;
+                            height: 1px;
+                            background: #040921;
+                            opacity: 0.24;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                        }
+                    }
+            
+                    .social-media{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+            
+                        .social-media-items{
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                        a{
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            background-color: #fff;
+                            // padding: 9px 12px;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 22px;
+                            border: 9px solid #04092111;
+                        }
+                    }
+            
+                    .already-have{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        text-align: center;
+                        letter-spacing: 0.1px;
+                        color: #040921;
+                        margin-bottom: 5px;
+                    }
+            
+                    .log-in-href{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+                        letter-spacing: 0.1px;
+                        text-decoration-line: underline !important;
+                        color: #040921;
+                        display: flex;
+                        justify-content: center;
+                    }
+            
+                    .privacy-policy{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 17px;
+                        text-align: center;
+                        letter-spacing: 0.1px;
+                        color: #040921;
+                        opacity: 0.6;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .checkout-check{
+                    background: #FFFFFF;
+                    box-shadow: 0px 10px 30px 5px rgba(4, 9, 33, 0.05);
+                    border-radius: 24px;
+                    color: #040921;
+
+                    
+                }
+            }
+        }
+    }
+}
