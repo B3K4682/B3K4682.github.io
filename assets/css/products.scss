@@ -1530,7 +1530,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        @media(max-width: 700px) {
+        @media(max-width: 850px) {
             flex-direction: column;
             padding-bottom: 90px;
         }
@@ -1539,7 +1539,7 @@ body {
             display: flex;
             flex-direction: column;
             height: 430px;
-            @media(max-width: 700px) {
+            @media(max-width: 850px) {
                 width: 90%;
                 height: auto;
             }
@@ -1570,7 +1570,7 @@ body {
             flex-direction: column;
             justify-content: space-between;
             height: 430px;
-            @media(max-width: 700px) {
+            @media(max-width: 850px) {
                 width: 90%;
                 margin-top: 30px;
                 height: auto;
@@ -1600,7 +1600,7 @@ body {
                 }
             }
             .surroundings-body-airport {
-                @media(max-width: 700px) {
+                @media(max-width: 850px) {
                     margin-top: 30px;
                 }
                 h1 {
@@ -1622,6 +1622,116 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.things-section {
+    padding: 100px 0;
+    .container {
+        h1 {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .things-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            border-radius: 24px;
+            padding: 50px 20px;
+            height: 428px;
+            @media(max-width: 950px) {
+                border: none;
+                height: auto;
+                flex-direction: column;
+                .things-wrapper {
+                    width: 100%;
+                }
+                .things-wrapper-2 {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                .things-wrapper-3 {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+            .things-wrapper {
+                height: 100%;
+                a {
+                    color: #000000;
+                    opacity: 0.8;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 105%;
+                        height: 1px;
+                        background-color: #040921;
+                        left: -2.5%;
+                        bottom: 0;
+                    }
+                }
+                h1 {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                .things-item {
+                    font-size: 16px;
+                    opacity: 0.8;
+                }
+            }
+            .things-wrapper-2 {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .things-item {
+                    h1, p {
+                        opacity: 0.8;
+                    }
+                }
+                a {
+                    color: #000000;
+                    opacity: 0.8;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 105%;
+                        height: 1px;
+                        background-color: #040921;
+                        left: -2.5%;
+                        bottom: 4px;
+                    }
+                }
+                
+            }
+            
+            .things-wrapper-3 {
+                height: 100%;   
+                h1 {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                a {
+                    color: #000000;
+                    opacity: 0.8;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 105%;
+                        height: 1px;
+                        background-color: #040921;
+                        left: -2.5%;
+                        bottom: 0px;
+                    }
+                }
+                
             }
         }
     }
