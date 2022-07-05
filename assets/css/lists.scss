@@ -272,12 +272,36 @@ body {
                 width: 70%;
 
                 .lists-item-desc {
+                    display: flex;
+                    align-items: center;
                     font-style: normal;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 21px;
                     letter-spacing: -0.32px;
                     color: rgba(4, 9, 33, 0.5);
+
+                    span {
+                        margin-right: 10px;
+                    }
+
+                    .lists-item-stars {
+                        display: flex;
+                        align-items: center;
+
+                        .lists-item-star {
+                            margin-right: 5px;
+                            &.active {
+                                svg {
+                                    fill: #FF961C;
+                                }
+                            }
+
+                            svg {
+                                fill: #C4C4C4;
+                            }
+                        }
+                    }
                 }
 
                 .lists-item-title {
@@ -355,10 +379,15 @@ body {
 
                 .lists-item-hotsale {
                     display: inline-flex;
+                    align-items: center;
                     background: linear-gradient(246.12deg, #9D50FF10 11.55%, #583CF010 104.8%);
                     border-radius: 8px;
                     padding: 5px 10px;
                     margin-top: 10px;
+
+                    .lists-item-hotsale-icon {
+                         margin-right: 5px;
+                    }
 
                     .lists-item-hotsale-text {
                         font-style: normal;
@@ -453,16 +482,18 @@ body {
 }
 
 .top-left-controls {
+    margin: 30px 0 0 30px;
     display: flex;
     flex-direction: column;
 }
 
 .zoom-controls {
-    margin: 10px 0 0 10px;
+    margin-top: 16px;
     padding: 10px 8px;
     background: #ffffff;
     border-radius: 12px;
     z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
     .zoom-controls-icon {
         cursor: pointer;
@@ -480,11 +511,11 @@ body {
 
 .x-controls {
     cursor: pointer;
-    margin: 10px 0 0 10px;
     padding: 8px 8px;
     background: #ffffff;
     border-radius: 12px;
     z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
     .x-controls-icon {
         color: #FFFFFF;
@@ -492,14 +523,72 @@ body {
 }
 
 .place-controls {
-    cursor: pointer;
-    margin: 10px 0 0 10px;
+    position: relative;
+    margin-top: 16px;
     padding: 8px 8px;
     background: #ffffff;
     border-radius: 12px;
     z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
     .place-controls-icon {
         color: #FFFFFF;
+    }
+
+    .place-controls-popout {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 150%;
+        display: flex;
+        padding: 15px;
+        margin: auto 0;
+        height: 67px;
+        width: 300px;
+        background: #040921;
+        border-radius: 12px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -7.5px;
+            margin: auto 0;
+            width: 15px;
+            height: 15px;
+            background: #040921;
+            border-radius: 0px 3px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.search-toggle-control {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 8px 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #0D0D0D;
+
+    svg {
+        margin-right: 8px;
     }
 }

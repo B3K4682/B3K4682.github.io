@@ -10,7 +10,10 @@ const initMap = () => {
 
   const topLeftControlsDiv = topLeftControls(map);
 
+  const searchToggleControlDiv = searchToggleControl(map);
+
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(topLeftControlsDiv);
+  map.controls[google.maps.ControlPosition.TOP].push(searchToggleControlDiv);
 }
 
 const topLeftControls = (map) => {
@@ -36,6 +39,12 @@ const topLeftControls = (map) => {
 
     const xUI = document.getElementsByClassName("top-left-controls")[0]
                         .getElementsByClassName("x-controls")[0];
+
+    return controlUI;
+}
+
+const searchToggleControl = (map) => {
+    const controlUI = document.getElementsByClassName("search-toggle-control")[0];
 
     return controlUI;
 }
