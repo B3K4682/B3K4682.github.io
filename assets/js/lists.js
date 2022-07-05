@@ -49,4 +49,46 @@ const searchToggleControl = (map) => {
     return controlUI;
 }
 
+function popout() {
+    const popout = document.getElementsByClassName("popout")[0];
+    let box = document.querySelector(".popout-content");
+    let popoutHead = document.querySelector(".popout-head");
+
+    popoutHead.addEventListener("touchmove", (e) => {
+        let touchLocation = e.targetTouches[0];
+        let height = window.screen.height - touchLocation.clientY + 10;
+
+        if (height < window.screen.height) {
+            box.style.height = `${height}px`;
+        }
+    });
+
+    popoutHead.addEventListener("touchend", (e) => {
+        const pos = parseInt(box.style.height);
+        if (pos < window.screen.height / 3) {
+            popout.classList.add("hidden");
+            document.body.style.overflow = "auto";
+            box.style.transition = "height 0.3s ease-in-out";
+            setTimeout(() => {
+                box.style.transition = "none";
+            }, 300);
+        }
+    });
+
+    const filterBtn = document.querySelector(".filterBtn");
+
+    filterBtn.addEventListener("click", () => {
+        popout.classList.remove("hidden");
+        box.style.height = "70%";
+        document.body.style.overflow = "hidden";
+        box.style.transition = "height 0.3s ease-in-out";
+        setTimeout(() => {
+            box.style.transition = "none";
+        }, 300);
+    });
+    
+}
+
+popout();
+
 window.initMap = initMap;

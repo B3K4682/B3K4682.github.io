@@ -147,7 +147,7 @@ body {
 
         @media (max-width: 975px) {
             .filter-btn {
-                padding: 15px;
+                padding: 13px;
                 border-radius: 12px;
 
                 .filter-btn-text {
@@ -847,5 +847,104 @@ body {
 
     svg {
         margin-right: 8px;
+    }
+}
+
+.more-filters {
+    margin-top: 28px;
+
+    .more-filters-title {
+        margin-bottom: 22px;
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            color: #040921;
+        }
+    }
+
+    .more-filters-items {
+        .more-filters-item {
+            padding: 15px 30px 0 30px;
+            border-top: 1px solid #E5E5E5;
+
+            .more-filters-item-title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                color: #040921;
+                padding-bottom: 15px;
+            }              
+
+            .more-filters-item-list {
+                margin-bottom: 10px;
+        
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                label.filter-checkbox {  
+                    margin-left: 0;
+                    margin-right: 1rem;
+                    margin-bottom: 10px;
+                    padding-left: 1.75rem;
+                    position: relative;
+                    -webkit-user-select: none;
+                       -moz-user-select: none;
+                        -ms-user-select: none;
+                            user-select: none;
+                            font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    display: flex;
+                    align-items: center;
+                    color: #040921;
+                  
+                    input[type="checkbox"] {  
+                      position: absolute;
+                      opacity: 0;
+                  
+                      &:focus ~ span {
+                        border: 1.5px solid #040921;
+                      }
+                  
+                      &:focus:checked ~ span {
+                        border: 1.5px solid #040921;
+                      }
+                  
+                      &:checked ~ span {
+                        color: #ffffff;
+                        background: #040921 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxMiIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgMTIgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZD0iTTQuNTc1IDguOTc3cy0uNDA0LS4wMDctLjUzNi0uMTY1TC4wNTcgNS42NGwuODI5LTEuMjI3TDQuNDcgNy4yNjggMTAuOTIxLjA4NmwuOTIzIDEuMTAzLTYuODYzIDcuNjRjLS4xMzQtLjAwMy0uNDA2LjE0OC0uNDA2LjE0OHoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPg0KPC9zdmc+) 50% 40% no-repeat;
+                        border: 1.5px solid #040921;
+                      }
+                    }
+                  
+                    span {
+                      border-radius: 7px;
+                      position: absolute;
+                      left: 0;
+                      top: 0px;
+                      width:  1.3rem; 
+                      height: 1.3rem;
+                      background-color: transparent;
+                      border: 1.5px solid #040921;
+                      pointer-events: none;
+                      -webkit-user-select: none;
+                         -moz-user-select: none;
+                          -ms-user-select: none;
+                              user-select: none;
+                    }  
+                }
+            }
+              
+        }
     }
 }
