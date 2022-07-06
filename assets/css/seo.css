@@ -39,6 +39,44 @@ body {
   font-family: 'Sk-Modernist', sans-serif !important;
 }
 
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #040921;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #040921;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #040921;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #040921;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #040921;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #040921;
+}
+
 input {
   background: #FFFFFF;
   border: 1px solid rgba(4, 9, 33, 0.08);
@@ -51,6 +89,23 @@ input {
 input:focus {
   outline: none;
   border: 1px solid #040921;
+}
+
+input[type="date"] {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../images/Calendar.svg) no-repeat;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
 
 label {
@@ -108,6 +163,38 @@ label {
   margin-bottom: 20px;
 }
 
+.input-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.input-flex input {
+  width: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+  .input-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .input-flex input {
+    width: 100%;
+  }
+  .input-flex input:last-child {
+    margin-top: 20px;
+  }
+}
+
 select {
   background: #FFFFFF;
   border: 1px solid rgba(4, 9, 33, 0.08);
@@ -118,11 +205,45 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  position: relative;
 }
 
 select:focus {
   outline: none;
   border: 1px solid #040921;
+}
+
+select::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/Arrow-Down2.svg) no-repeat center;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+
+.phone-select-combinate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.phone-select-combinate input {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 135px;
+}
+
+.phone-select-combinate select {
+  z-index: 10;
+  width: 115px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .input_error {
