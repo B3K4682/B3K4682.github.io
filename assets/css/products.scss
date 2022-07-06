@@ -1740,3 +1740,78 @@ body {
         }
     }
 }
+
+.faq-section {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .faq-left {
+        width: 47%;
+        .accordion {
+            .accordion-item {
+                margin: 20px 0;
+                border: 1px solid rgba(10, 27, 61, 0.08);
+                border-radius: 16px;
+                .accordion-button {
+                    font-weight: 700;
+                    border-radius: 16px;
+                    box-shadow: unset !important;
+                }
+                .accordion-button::after {
+                    background-image: url(../images/arrow-up.svg) !important;
+                    transform: var(--bs-accordion-btn-icon-transform);
+                    height: 14px;
+                }
+                .accordion-button:not(.collapsed)::after {
+                    background-image: url(../images/Arrow-Down2.svg) !important;
+                    transform: var(--bs-accordion-btn-icon-transform);
+                }
+                .accordion-button:not(.collapsed) {
+                    background-color: unset !important;
+                    color: unset !important;
+                }
+            }
+        }
+    }
+    .faq-right {
+        width: 47%;
+        .accordion {
+            .accordion-item {
+                margin: 20px 0;
+                border: 1px solid rgba(10, 27, 61, 0.08);
+                border-radius: 16px;
+                .accordion-button {
+                    font-weight: 700;
+                    border-radius: 16px;
+                    box-shadow: unset !important;
+                }
+                .accordion-button::after {
+                    background-image: url(../images/arrow-up.svg) !important;
+                    transform: var(--bs-accordion-btn-icon-transform);
+                    height: 14px;
+                }
+                .accordion-button:not(.collapsed)::after {
+                    background-image: url(../images/Arrow-Down2.svg) !important;
+                    transform: var(--bs-accordion-btn-icon-transform);
+                }
+                .accordion-button:not(.collapsed) {
+                    background-color: unset !important;
+                    color: unset !important;
+                }
+            }
+        }
+    }
+}
+
+.book-products-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #040921;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+}
