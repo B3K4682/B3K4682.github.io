@@ -19,6 +19,18 @@ body {
   font-family: 'Sk-Modernist', sans-serif !important;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #040921;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #040921;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #040921;
+}
 input{
   background: #FFFFFF;
   border: 1px solid rgba(4, 9, 33, 0.08);
@@ -31,6 +43,20 @@ input{
     border: 1px solid #040921;
   }
 }
+
+input[type="date"]{
+  flex-direction: row-reverse;
+    &::-webkit-calendar-picker-indicator {
+      color: rgba(0, 0, 0, 0);
+      opacity: 1;
+      display: block;
+      background: url(../images/Calendar.svg) no-repeat;
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+}
+
 
 label{
   font-style: normal;
@@ -72,6 +98,26 @@ label{
   margin-bottom: 20px;
 }
 
+.input-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  input{
+    width: calc(50% - 15px);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    input{
+      width: 100%;
+
+      &:last-child{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
 select{
   background: #FFFFFF;
   border: 1px solid rgba(4, 9, 33, 0.08);
@@ -79,10 +125,42 @@ select{
   padding: 12px;
   transition: 0.2s;
   appearance: none;
+  position: relative;
 
   &:focus{
     outline: none;
     border: 1px solid #040921;
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/Arrow-Down2.svg) no-repeat center;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+}
+
+.phone-select-combinate{
+  display: flex;
+  position: relative;
+
+  input{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 135px;
+  }
+
+  select{
+    z-index: 10;
+    width: 115px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
