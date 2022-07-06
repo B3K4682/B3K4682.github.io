@@ -7,7 +7,7 @@ body{
 }
 
 p{
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 
 section{
@@ -45,14 +45,13 @@ section{
             display: flex;
             justify-content: space-between;
             .checkout-item{
-                margin-top: 30px;
-
                 &:first-child{
-                    width: 68%;
+                    width: 64%;
                 }
 
                 &:last-child{
-                    width: 30%;
+                    width: 34%;
+                    background-color: red;
                 }
 
                 .modal-vv-content{
@@ -65,10 +64,18 @@ section{
                     overflow: auto;
                     z-index: 999999999999;
             
-                    .input-section{
-
+                    @media (max-width: 1000px) {
+                        width: 60%;
                     }
-
+            
+                    @media (max-width: 600px) {
+                        width: 80%;
+                    }
+            
+                    @media (max-width: 400px) {
+                        width: 90%;
+                    }
+            
                     .password-input{
                         position: relative;
             
@@ -104,10 +111,6 @@ section{
                         letter-spacing: -0.078px;
                         color: #000000;
                         margin-bottom: 30px;
-                    }
-
-                    .submit-btn{
-                        background: #040921;
                     }
             
                     .password-attrs{
@@ -230,176 +233,8 @@ section{
                     box-shadow: 0px 10px 30px 5px rgba(4, 9, 33, 0.05);
                     border-radius: 24px;
                     color: #040921;
-                    padding: 25px;
 
-                    .checkout-top-content{
-                        display: flex;
-                        align-items: center;
-
-                        .content-img{
-                            width: 30%;
-
-                            img{
-                                width: 100%;
-                            }
-                        }
-
-                        .content-text{
-                            margin-left: 10px;
-
-                            .rate{
-                                display: flex;
-                                align-items: center;
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 14px;
-                                line-height: 21px;
-                                letter-spacing: -0.32px;
-                                color: rgba(4, 9, 33, 0.5);
-    
-                                svg{
-                                    &:first-child{
-                                        margin-left: 10px;
-                                    }
-                                }
-                            }
-                            
-                            .content-title{
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 18px;
-                                line-height: 21px;
-                                letter-spacing: -0.32px;
-                                color: #040921;
-                                margin-bottom: 15px !important;
-                            }
-
-                            .rate_count{
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 14px;
-                                line-height: 18px;
-                                color: #040921;
-
-                                span{
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    font-size: 14px;
-                                    line-height: 18px;
-                                    color: #040921;
-                                    opacity: 0.5;
-                                }
-                            }
-                        }
-                    }
-
-                    .checkout-c-line{
-                        margin-top: 15px;
-                        margin-bottom: 15px;
-                        width: 100%;
-                        height: 1px;
-                        background: rgba(4, 9, 33, 0.08);
-                    }
-
-                    .trip{
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 22px;
-                        color: #040921;
-                        margin-bottom: 20px !important;
-                        margin-top: 10px;
-                    }
-
-                    .trip-attrs{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 20px;
-
-                        .trip-attr{
-
-                            .attr-name{
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 16px;
-                                line-height: 19px;
-                                color: #040921;
-                                margin-bottom: 10px !important;
-                            }
-
-                            .attr-date{
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 16px;
-                                line-height: 19px;
-                                color: #040921;
-                                opacity: 0.5;
-                            }
-
-                            a{
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 14px;
-                                line-height: 17px;
-                                color: #040921;
-                                opacity: 0.75;
-                            }
-                        }
-                    }
-
-                    .checkout-bottom{
-                        
-                        .price-details{
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 18px;
-                            line-height: 22px;
-                            color: #040921;
-                            margin-bottom: 10px !important;
-                            margin-top: 10px;
-                        }
-
-                        .price-detail-box{
-
-                            .price-attrs{
-                                display: flex;
-                                justify-content: space-between;
-    
-                                .price-title{
-                                    font-style: normal;
-                                    margin-bottom: 8px;
-                                    line-height: 19px;
-                                    letter-spacing: -0.32px;
-                                    color: rgba(4, 9, 33, 0.84);
-                                }
-        
-                                .price-num{
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    font-size: 16px;
-                                    line-height: 19px;
-                                    letter-spacing: -0.32px;
-                                    color: rgba(4, 9, 33, 0.84);
-                                }
-                            }
-                        }
-
-                        .total-items{
-                            display: flex;
-                            justify-content: space-between;
-                            margin-top: 15px;
-
-                            .total-text, .total-number{
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 24px;
-                                line-height: 29px;
-                                letter-spacing: -0.32px;
-                                color: #040921;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }

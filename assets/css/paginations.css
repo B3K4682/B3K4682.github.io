@@ -86,13 +86,4 @@
   border: 1px solid rgba(4, 9, 33, 0.04);
   color: #ffffff;
 }
-
-@media (max-width: 769px) {
-  .pagination {
-    display: none;
-  }
-  .pagination.center {
-    display: none;
-  }
-}
 /*# sourceMappingURL=paginations.css.map */
