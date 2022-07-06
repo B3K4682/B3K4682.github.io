@@ -94,18 +94,20 @@ const mapBtn = document.querySelector(".map-btn");
 
 
 mapBtn.addEventListener("click", () => {
-    const listsRight = document.querySelector(".lists-right");
+    if(!document.getElementsByClassName("map-btn")[0].classList.contains("disabled")) {
+        const listsRight = document.querySelector(".lists-right");
 
-    if(window.getComputedStyle(listsRight).display === "none") {
-        listsRight.style.display = "block";
-        setTimeout(() => {
-            listsRight.classList.add("show");
-        }, 150)   
-    } else {
-        listsRight.style.display = "none";
-        setTimeout(() => {
-            listsRight.classList.remove("show");
-        }, 150)   
+        if(window.getComputedStyle(listsRight).display === "none") {
+            listsRight.style.display = "block";
+            setTimeout(() => {
+                listsRight.classList.add("show");
+            }, 150)   
+        } else {
+            listsRight.style.display = "none";
+            setTimeout(() => {
+                listsRight.classList.remove("show");
+            }, 150)   
+        }
     }
 });
 
