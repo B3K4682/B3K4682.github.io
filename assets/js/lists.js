@@ -109,4 +109,6 @@ mapBtn.addEventListener("click", () => {
     }
 });
 
+// $('.map-results').slick();
+
 window.initMap = initMap;
