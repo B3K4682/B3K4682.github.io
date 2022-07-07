@@ -1870,6 +1870,15 @@ body {
             color: #000000;
           }
         }
+
+
+        @media (max-width: 951px) {
+          width: calc((100% / 2) - 50px);
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
       }
     }
 
@@ -1921,6 +1930,10 @@ body {
             line-height: 24px;
             letter-spacing: -0.32px;
             color: #000000;
+          }
+
+          @media (max-width: 951px) {
+            width: 100%;
           }
         }
       }

@@ -2512,6 +2512,18 @@ body {
   color: #000000;
 }
 
+@media (max-width: 951px) {
+  .reviews .reviews-card .reviews-card-header .reviews-header-item {
+    width: calc((100% / 2) - 50px);
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews .reviews-card .reviews-card-header .reviews-header-item {
+    width: 100%;
+  }
+}
+
 .reviews .reviews-card .reviews-card-body {
   padding: 48px 48px 18px 48px;
 }
@@ -2575,6 +2587,12 @@ body {
   line-height: 24px;
   letter-spacing: -0.32px;
   color: #000000;
+}
+
+@media (max-width: 951px) {
+  .reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item {
+    width: 100%;
+  }
 }
 
 .reviews .reviews-card .reviews-card-body .reviews-body-button {
