@@ -2439,4 +2439,163 @@ body {
           justify-content: flex-start;
   margin-left: 15px;
 }
+
+.reviews {
+  margin-bottom: 100px;
+}
+
+.reviews .reviews-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #040921;
+  margin-bottom: 24px;
+}
+
+.reviews .reviews-title .avearge {
+  color: #9D50FF;
+}
+
+.reviews .reviews-title .count {
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.270769px;
+  opacity: 0.5;
+}
+
+.reviews .reviews-card {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+}
+
+.reviews .reviews-card .reviews-card-header {
+  padding: 48px 48px 18px 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews .reviews-card .reviews-card-header .reviews-header-item {
+  width: calc((100% / 3) - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.reviews .reviews-card .reviews-card-header .reviews-header-item .reviews-item-icon {
+  margin-right: 20px;
+}
+
+.reviews .reviews-card .reviews-card-header .reviews-header-item .reviews-item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.reviews .reviews-card .reviews-card-header .reviews-header-item .reviews-item-text .reviews-item-value {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.reviews .reviews-card .reviews-card-body {
+  padding: 48px 48px 18px 48px;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item {
+  width: calc((100% / 2) - 50px);
+  margin-bottom: 50px;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item .reviews-item-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item .reviews-item-top .reviews-item-texts {
+  margin-left: 20px;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item .reviews-item-top .reviews-item-texts .reviews-item-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  color: #000000;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item .reviews-item-top .reviews-item-texts .reviews-item-date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 4px;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-items .reviews-body-item .reviews-item-bottom {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  color: #000000;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-button {
+  background: #9D50FF10;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.reviews .reviews-card .reviews-card-body .reviews-body-button .reviews-body-button-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.32px;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 /*# sourceMappingURL=products.css.map */
