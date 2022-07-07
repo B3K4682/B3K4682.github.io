@@ -1744,12 +1744,25 @@ body {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            .faq-left {
+                width: 100%;
+            }
+            .faq-right {
+                width: 100%;
+            }
+            h1 {
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
     }
     .faq-left {
         width: 47%;
         .accordion {
             .accordion-item {
-                margin: 20px 0;
+                margin-top: 20px;
                 border: 1px solid rgba(10, 27, 61, 0.08);
                 border-radius: 16px;
                 .accordion-button {

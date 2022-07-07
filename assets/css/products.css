@@ -2355,12 +2355,31 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .faq-section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .faq-section .container .faq-left {
+    width: 100%;
+  }
+  .faq-section .container .faq-right {
+    width: 100%;
+  }
+  .faq-section .container h1 {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
 .faq-section .faq-left {
   width: 47%;
 }
 
 .faq-section .faq-left .accordion .accordion-item {
-  margin: 20px 0;
+  margin-top: 20px;
   border: 1px solid rgba(10, 27, 61, 0.08);
   border-radius: 16px;
 }
