@@ -135,172 +135,217 @@ button.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    popout(), popout2(), popout3(), popout4();
+    popouts();
 });
 
-function popout() {
-    const popout = document.getElementsByClassName("popout")[0];
-    let box = document.querySelector(".popout-content");
-    let popoutHead = document.querySelector(".popout-head");
+function popouts() {
+    const popouts = document.querySelectorAll(".popout");
 
-    popoutHead.addEventListener("touchmove", (e) => {
-        let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 10;
+    popouts.forEach((popout) => {
+        let box = popout.querySelector(".popout-content");
+        let popoutHead = popout.querySelector(".popout-head");
+    
+        popoutHead.addEventListener("touchmove", (e) => {
+            let touchLocation = e.targetTouches[0];
+            let height = window.screen.height - touchLocation.clientY + 10;
+    
+            if (height < window.screen.height) {
+                box.style.height = `${height}px`;
+            }
+        });
+    
+        popoutHead.addEventListener("touchend", (e) => {
+            const pos = parseInt(box.style.height);
+            if (pos < window.screen.height / 3) {
+                popout.classList.add("hidden");
+                document.body.style.overflow = "auto";
+                box.style.transition = "height 0.3s ease-in-out";
+                setTimeout(() => {
+                    box.style.transition = "none";
+                }, 300);
+            }
+        });
 
-        if (height < window.screen.height) {
-            box.style.height = `${height}px`;
+        let popoutId = popout.getAttribute("data-popout");
+        let popoutButton = document.querySelector(`[data-toggle-popout="${popoutId}"]`);
+        if(popoutButton) {
+            popoutButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                popout.classList.remove("hidden");
+                box.style.height = "70%";
+                document.body.style.overflow = "hidden";
+                box.style.transition = "height 0.3s ease-in-out";
+                setTimeout(() => {
+                    box.style.transition = "none";
+                }, 300);
+            });
         }
-    });
-
-    popoutHead.addEventListener("touchend", (e) => {
-        const pos = parseInt(box.style.height);
-        if (pos < window.screen.height / 3) {
-            popout.classList.add("hidden");
-            document.body.style.overflow = "auto";
-            box.style.transition = "height 0.3s ease-in-out";
-            setTimeout(() => {
-                box.style.transition = "none";
-            }, 300);
-        }
-    });
-
-    const searchIcon = document.querySelector(".search-icon");
-
-    searchIcon.addEventListener("click", () => {
-        popout.classList.remove("hidden");
-        box.style.height = "70%";
-        document.body.style.overflow = "hidden";
-        box.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box.style.transition = "none";
-        }, 300);
     });
 }
 
-function popout2() {
-    const popout2 = document.getElementsByClassName("popout2")[0];
-    let box2 = document.querySelector(".popout2-content");
-    let popoutHead2 = document.querySelector(".popout2-head");
+// function popout() {
+//     const popout = document.getElementsByClassName("popout")[0];
+//     let box = document.querySelector(".popout-content");
+//     let popoutHead = document.querySelector(".popout-head");
 
-    popoutHead2.addEventListener("touchmove", (e) => {
-        let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 10;
+//     popoutHead.addEventListener("touchmove", (e) => {
+//         let touchLocation = e.targetTouches[0];
+//         let height = window.screen.height - touchLocation.clientY + 10;
 
-        if (height < window.screen.height) {
-            box2.style.height = `${height}px`;
-        }
-    });
+//         if (height < window.screen.height) {
+//             box.style.height = `${height}px`;
+//         }
+//     });
 
-    popoutHead2.addEventListener("touchend", (e) => {
-        const pos = parseInt(box2.style.height);
-        if (pos < window.screen.height / 3) {
-            popout2.classList.add("hidden");
-            document.body.style.overflow = "auto";
-            box2.style.transition = "height 0.3s ease-in-out";
-            setTimeout(() => {
-                box2.style.transition = "none";
-            }, 300);
-        }
-    });
+//     popoutHead.addEventListener("touchend", (e) => {
+//         const pos = parseInt(box.style.height);
+//         if (pos < window.screen.height / 3) {
+//             popout.classList.add("hidden");
+//             document.body.style.overflow = "auto";
+//             box.style.transition = "height 0.3s ease-in-out";
+//             setTimeout(() => {
+//                 box.style.transition = "none";
+//             }, 300);
+//         }
+//     });
 
-    const heartIcon = document.querySelector(".heart-icon");
+//     const searchIcon = document.querySelector(".search-icon");
 
-    heartIcon.addEventListener("click", () => {
-        popout2.classList.remove("hidden");
-        box2.style.height = "70%";
-        document.body.style.overflow = "hidden";
-        box2.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box2.style.transition = "none";
-        }, 300);
-    });
-}
+//     searchIcon.addEventListener("click", () => {
+//         popout.classList.remove("hidden");
+//         box.style.height = "70%";
+//         document.body.style.overflow = "hidden";
+//         box.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box.style.transition = "none";
+//         }, 300);
+//     });
+// }
 
-function popout3() {
-    const popout3 = document.getElementsByClassName("popout3")[0];
-    let box3 = document.querySelector(".popout3-content");
-    let popoutHead3 = document.querySelector(".popout3-head");
+// function popout2() {
+//     const popout2 = document.getElementsByClassName("popout2")[0];
+//     let box2 = document.querySelector(".popout2-content");
+//     let popoutHead2 = document.querySelector(".popout2-head");
 
-    popoutHead3.addEventListener("touchmove", (e) => {
-        let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 10;
+//     popoutHead2.addEventListener("touchmove", (e) => {
+//         let touchLocation = e.targetTouches[0];
+//         let height = window.screen.height - touchLocation.clientY + 10;
 
-        if (height < window.screen.height) {
-            box3.style.height = `${height}px`;
-        }
-    });
+//         if (height < window.screen.height) {
+//             box2.style.height = `${height}px`;
+//         }
+//     });
 
-    popoutHead3.addEventListener("touchend", (e) => {
-        const pos = parseInt(box3.style.height);
-        if (pos < window.screen.height / 3) {
-            popout3.classList.add("hidden");
-            document.body.style.overflow = "auto";
-            box3.style.transition = "height 0.3s ease-in-out";
-            setTimeout(() => {
-                box3.style.transition = "none";
-            }, 300);
-        }
-    });
+//     popoutHead2.addEventListener("touchend", (e) => {
+//         const pos = parseInt(box2.style.height);
+//         if (pos < window.screen.height / 3) {
+//             popout2.classList.add("hidden");
+//             document.body.style.overflow = "auto";
+//             box2.style.transition = "height 0.3s ease-in-out";
+//             setTimeout(() => {
+//                 box2.style.transition = "none";
+//             }, 300);
+//         }
+//     });
 
-    const notificationIcon = document.querySelector(".notification-icon");
+//     const heartIcon = document.querySelector(".heart-icon");
 
-    notificationIcon.addEventListener("click", () => {
-        popout3.classList.remove("hidden");
-        box3.style.height = "70%";
-        document.body.style.overflow = "hidden";
-        box3.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box3.style.transition = "none";
-        }, 300);
-    });
-}
+//     heartIcon.addEventListener("click", () => {
+//         popout2.classList.remove("hidden");
+//         box2.style.height = "70%";
+//         document.body.style.overflow = "hidden";
+//         box2.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box2.style.transition = "none";
+//         }, 300);
+//     });
+// }
 
-function popout4() {
-    const popout4 = document.getElementsByClassName("popout4")[0];
-    let box4 = document.querySelector(".popout4-content");
-    let popoutHead4 = document.querySelector(".popout4-head");
+// function popout3() {
+//     const popout3 = document.getElementsByClassName("popout3")[0];
+//     let box3 = document.querySelector(".popout3-content");
+//     let popoutHead3 = document.querySelector(".popout3-head");
 
-    const popout3 = document.getElementsByClassName("popout3")[0];
-    let box3 = document.querySelector(".popout3-content");
-    let popoutHead3 = document.querySelector(".popout3-head");
+//     popoutHead3.addEventListener("touchmove", (e) => {
+//         let touchLocation = e.targetTouches[0];
+//         let height = window.screen.height - touchLocation.clientY + 10;
 
-    popoutHead4.addEventListener("touchmove", (e) => {
-        let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 10;
+//         if (height < window.screen.height) {
+//             box3.style.height = `${height}px`;
+//         }
+//     });
 
-        if (height < window.screen.height) {
-            box4.style.height = `${height}px`;
-        }
-    });
+//     popoutHead3.addEventListener("touchend", (e) => {
+//         const pos = parseInt(box3.style.height);
+//         if (pos < window.screen.height / 3) {
+//             popout3.classList.add("hidden");
+//             document.body.style.overflow = "auto";
+//             box3.style.transition = "height 0.3s ease-in-out";
+//             setTimeout(() => {
+//                 box3.style.transition = "none";
+//             }, 300);
+//         }
+//     });
 
-    popoutHead4.addEventListener("touchend", (e) => {
-        const pos = parseInt(box4.style.height);
-        if (pos < window.screen.height / 3) {
-            popout4.classList.add("hidden");
-            document.body.style.overflow = "auto";
-            box4.style.transition = "height 0.3s ease-in-out";
-            setTimeout(() => {
-                box3.style.transition = "none";
-            }, 300);
-        }
-    });
+//     const notificationIcon = document.querySelector(".notification-icon");
 
-    const searchButton = document.querySelector(".search-button");
+//     notificationIcon.addEventListener("click", () => {
+//         popout3.classList.remove("hidden");
+//         box3.style.height = "70%";
+//         document.body.style.overflow = "hidden";
+//         box3.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box3.style.transition = "none";
+//         }, 300);
+//     });
+// }
 
-    searchButton.addEventListener("click", () => {
-        popout3.classList.add("hidden");
-        document.body.style.overflow = "auto";
-        box3.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box3.style.transition = "none";
-        }, 300);
+// function popout4() {
+//     const popout4 = document.getElementsByClassName("popout4")[0];
+//     let box4 = document.querySelector(".popout4-content");
+//     let popoutHead4 = document.querySelector(".popout4-head");
 
-        popout4.classList.remove("hidden");
-        box4.style.height = "70%";
-        document.body.style.overflow = "hidden";
-        box4.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box4.style.transition = "none";
-        }, 300);
-    });
-}
+//     const popout3 = document.getElementsByClassName("popout3")[0];
+//     let box3 = document.querySelector(".popout3-content");
+//     let popoutHead3 = document.querySelector(".popout3-head");
+
+//     popoutHead4.addEventListener("touchmove", (e) => {
+//         let touchLocation = e.targetTouches[0];
+//         let height = window.screen.height - touchLocation.clientY + 10;
+
+//         if (height < window.screen.height) {
+//             box4.style.height = `${height}px`;
+//         }
+//     });
+
+//     popoutHead4.addEventListener("touchend", (e) => {
+//         const pos = parseInt(box4.style.height);
+//         if (pos < window.screen.height / 3) {
+//             popout4.classList.add("hidden");
+//             document.body.style.overflow = "auto";
+//             box4.style.transition = "height 0.3s ease-in-out";
+//             setTimeout(() => {
+//                 box3.style.transition = "none";
+//             }, 300);
+//         }
+//     });
+
+//     const searchButton = document.querySelector(".search-button");
+
+//     searchButton.addEventListener("click", () => {
+//         popout3.classList.add("hidden");
+//         document.body.style.overflow = "auto";
+//         box3.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box3.style.transition = "none";
+//         }, 300);
+
+//         popout4.classList.remove("hidden");
+//         box4.style.height = "70%";
+//         document.body.style.overflow = "hidden";
+//         box4.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box4.style.transition = "none";
+//         }, 300);
+//     });
+// }

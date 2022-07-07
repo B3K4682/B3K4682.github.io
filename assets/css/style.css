@@ -563,37 +563,89 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   transition: all 300ms ease-in-out;
 }
 
-.popout2 {
+.popout .popout-content .popout-body .popout-body-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 5%;
+  gap: 10px;
+  border-bottom: 1px solid #F0F1F3;
+}
+
+.popout .popout-content .popout-body .popout-body-heading p {
+  margin: 0;
+}
+
+.popout .popout-content .popout-body .popout-footer {
   width: 100%;
-  height: 100vh;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.popout .popout-content .popout-body .popout-footer a {
+  color: #040921;
+  position: relative;
+}
+
+.popout .popout-content .popout-body .popout-footer a::after {
+  content: '';
   position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.72);
-  z-index: 10000000000;
-  display: none;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  width: 105%;
+  height: 1px;
+  background-color: #040921;
+  left: -2.5%;
+  bottom: 3px;
 }
 
-@media (max-width: 768px) {
-  .popout2 {
-    display: block !important;
-  }
+.popout .popout-content .popout-body .popout-footer button {
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%), #040921;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
 }
 
-.popout2 .popout2-content {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-  width: 100%;
-  height: 70%;
-  background: white;
-  position: fixed;
-  bottom: 0;
+.popout .popout-content .popout-body .popout-footer button svg {
+  margin-bottom: 3px;
+  margin-right: 5px;
 }
 
-.popout2 .popout2-content .popout2-head {
-  height: 20px;
-  width: 100%;
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-add {
+  margin-top: 40px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-add a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,38 +655,97 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
+  gap: 10px;
+  text-decoration: none;
 }
 
-.popout2 .popout2-content .popout2-body {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-add a p {
+  color: #040921;
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 10px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item {
   width: 100%;
-  height: 100%;
-  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper {
-  margin: auto;
-  width: 90%;
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p {
+  margin: 0;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-title {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p:nth-child(1) {
+  color: #040921;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p:nth-child(2) {
+  font-size: 11px;
+  color: #040921BF;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter p {
+  margin: 0;
+  margin: 0 20px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter button {
+  border: none;
+  background-color: transparent;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter button:nth-child(1) {
+  color: #040921;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-title {
   margin-left: 5px;
   padding-top: 10px;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-title h1 {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-title h1 {
   color: #040921;
   font-size: 24px;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-title p {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-title p {
   color: #040921;
   margin-top: 15px;
   font-size: 14px;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-items {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,7 +762,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   padding-bottom: 30px;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-items .popout-body-sections-item {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-items .popout-body-sections-item {
   border-radius: 8px;
   margin-top: 20px;
   padding: 40px;
@@ -670,56 +781,18 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   background: #FAFAFA;
 }
 
-.popout2 .popout2-content .popout2-body .popout2-wrapper .popout-body-sections-items .popout-body-sections-item p {
+.popout .popout-content .popout-body .popout-wrapper .popout-body-sections-items .popout-body-sections-item p {
   margin: 0;
   font-weight: bold;
 }
 
-.popout2.hidden {
-  background: none;
-  pointer-events: none;
-}
-
-.popout2.hidden .popout2-content {
-  height: 0% !important;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-.popout3 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.72);
-  z-index: 10000000000;
-  display: none;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .popout3 {
-    display: block !important;
-  }
-}
-
-.popout3 .popout3-content {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-  width: 100%;
-  height: 70%;
-  background: white;
-  position: fixed;
-  bottom: 0;
-}
-
-.popout3 .popout3-content .popout3-head {
-  height: 20px;
-  width: 100%;
+.popout .popout-content .popout-body .popout-wrapper .calendar-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -728,276 +801,199 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
           justify-content: center;
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
-}
-
-.popout3 .popout3-content .popout3-body {
-  width: 100%;
-  height: 100%;
-  overflow-x: scroll;
-}
-
-.popout3 .popout3-content .popout3-body .popout-body-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 5%;
-  gap: 10px;
-  border-bottom: 1px solid #F0F1F3;
-}
-
-.popout3 .popout3-content .popout3-body .popout-body-heading p {
-  margin: 0;
-}
-
-.popout3 .popout3-content .popout3-body .popout-footer {
-  width: 100%;
   padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.popout3 .popout3-content .popout3-body .popout-footer a {
-  color: #040921;
-  position: relative;
-}
-
-.popout3 .popout3-content .popout3-body .popout-footer a::after {
-  content: '';
-  position: absolute;
-  width: 105%;
-  height: 1px;
-  background-color: #040921;
-  left: -2.5%;
-  bottom: 3px;
-}
-
-.popout3 .popout3-content .popout3-body .popout-footer button {
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%), #040921;
-  border: none;
-  padding: 5px 15px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.popout3 .popout3-content .popout3-body .popout-footer button svg {
-  margin-bottom: 3px;
-  margin-right: 5px;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper {
+  width: 100%;
   margin: auto;
-  width: 90%;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms {
-  margin-top: 20px;
+.popout .popout-content .popout-body .popout-wrapper .calendar-top svg {
+  margin-right: 10px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar-line {
+  width: 100%;
+  height: 1px;
+  background: #F0F1F3;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar {
+  width: 100%;
+  margin: auto;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .calendar-date {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-bottom: 30px;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-title {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-add {
-  margin-top: 40px;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-add a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-add a p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
   color: #040921;
-  margin: 0;
-  font-size: 14px;
-  margin-bottom: 2px;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 10px;
+.popout .popout-content .popout-body .popout-wrapper .calendar .calendar-date svg {
+  margin-left: 7px;
+  margin-top: -3px;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item {
+.popout .popout-content .popout-body .popout-wrapper .calendar .week {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .week div {
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.7922px;
+  line-height: 18px;
+  color: #040921;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days div {
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.7922px;
+  line-height: 18px;
+  color: rgba(4, 9, 33, 0.5);
+  width: 100%;
+  height: 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .today {
+  color: #040921;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .active-start, .popout .popout-content .popout-body .popout-wrapper .calendar .days .active-end {
+  position: relative;
+  color: #fff;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .active-start::before, .popout .popout-content .popout-body .popout-wrapper .calendar .days .active-end::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  border-radius: 100px;
+  width: 85%;
+  height: 90%;
+  z-index: -1;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .in_range {
+  background: linear-gradient(246.12deg, #9c50ff0a 11.55%, #573cf00a 104.8%);
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .in_range_start {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .calendar .days .in_range_end {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid rgba(4, 9, 33, 0.08);
+}
+
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid rgba(4, 9, 33, 0.08);
+  padding: 15px 20px;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p {
-  margin: 0;
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-top span {
+  font-weight: 700;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p:nth-child(1) {
-  color: #040921;
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-top p {
+  margin-bottom: 0;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-title p:nth-child(2) {
-  font-size: 11px;
-  color: #040921BF;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter {
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+  padding: 0px 20px;
 }
 
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter p {
-  margin: 0;
-  margin: 0 20px;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter button {
-  border: none;
-  background-color: transparent;
-}
-
-.popout3 .popout3-content .popout3-body .popout3-wrapper .popout-body-rooms .popout-body-rooms-items .popout-body-rooms-item .popout-body-rooms-item-counter button:nth-child(1) {
-  color: #040921;
-}
-
-.popout3.hidden {
-  background: none;
-  pointer-events: none;
-}
-
-.popout3.hidden .popout3-content {
-  height: 0% !important;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-.popout4 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.72);
-  z-index: 10000000000;
-  display: none;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .popout4 {
-    display: block !important;
-  }
-}
-
-.popout4 .popout4-content {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-  width: 100%;
-  height: 70%;
-  background: white;
-  position: fixed;
-  bottom: 0;
-}
-
-.popout4 .popout4-content .popout4-head {
-  height: 20px;
-  width: 100%;
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-bottom a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
+  -webkit-text-decoration-line: underline !important;
+          text-decoration-line: underline !important;
+  color: #040921;
 }
 
-.popout4 .popout4-content .popout4-body {
-  width: 100%;
-  height: 100%;
-  overflow-x: scroll;
-}
-
-.popout4 .popout4-content .popout4-body .popout-body-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 5%;
-  gap: 10px;
-  border-bottom: 1px solid #F0F1F3;
-}
-
-.popout4 .popout4-content .popout4-body .popout-body-heading p {
-  margin: 0;
-}
-
-.popout4 .popout4-content .popout4-body .popout4-wrapper {
-  margin: auto;
-  width: 90%;
-}
-
-.popout4.hidden {
-  background: none;
-  pointer-events: none;
-}
-
-.popout4.hidden .popout4-content {
-  height: 0% !important;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+.popout .popout-content .popout-body .popout-wrapper .callendar-bottom .bottom-bottom button {
+  border: 0;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%), #040921;
+  border-radius: 8px;
+  padding: 10px 30px;
+  color: #fff;
 }
 
 .default-btn {
