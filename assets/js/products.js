@@ -22,11 +22,19 @@ $(".slider-items").slick({
     ],
 });
 
-$(document).on('ready', function () {
-    $(".book-img").slick({
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
+$(".book-img").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
 });
+
+// if ($(window).width() < 760) {
+//     $(".book-items").slick({
+//         dots: true,
+//         arrows: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//     });
+
+// }
