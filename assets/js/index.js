@@ -53,17 +53,6 @@ $(".adventure-items").slick({
         },
     ],
 });
-
-if ($(window).width() < 640) {
-    $(".type-items").slick({
-        dots: false,
-        arrows: false,
-        variableWidth: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
-}
-
 if ($(window).width() < 760) {
     $(".stay-items").slick({
         dots: false,
@@ -349,3 +338,17 @@ function popouts() {
 //         }, 300);
 //     });
 // }
+
+
+
+if ($(window).width() < 760) {
+    $(".book-items").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        variableWidth: true,
+        dots: false,
+        arrows: true,
+    });
+}

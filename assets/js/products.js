@@ -29,12 +29,15 @@ $(".book-img").slick({
     slidesToScroll: 1,
 });
 
-// if ($(window).width() < 760) {
-//     $(".book-items").slick({
-//         dots: true,
-//         arrows: false,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//     });
-
-// }
+if ($(window).width() < 760) {
+    $(".book-items").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        variableWidth: true,
+        dots: true,
+        arrows: true,
+        centerMode: true,
+    });
+}

@@ -31,6 +31,7 @@ header {
         .menu-items {
           z-index: 9999999;
           position: relative;
+          padding-left: 0 !important;
           .menu-item {
             margin: 0px 12px;
             align-self: self-end;

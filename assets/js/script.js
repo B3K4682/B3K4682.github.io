@@ -11,3 +11,4 @@ $("#navigation-close-btn").on("click", () => {
 $(".top-picker-item").click(function () {
     $(this).toggleClass("picker-active");
 });
+

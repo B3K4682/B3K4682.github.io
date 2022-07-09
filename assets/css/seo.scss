@@ -1,11 +1,30 @@
 @import "./style.scss";
 
 @media (max-width: 450px) {
-  .menu-item:first-child {
-    display: none !important;
-  }
 
   .menu-item:nth-child(3) {
     display: none !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .service-items {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .service-item {
+    width: auto !important;
+  }
+  .service-desc {
+    display: none !important;
+  }
+
+  .href-flex {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .service-items {
+    grid-template-columns: 1fr !important;
   }
 }

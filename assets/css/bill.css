@@ -121,6 +121,94 @@ li {
   color: #040921;
 }
 
+.section-select_phone {
+  width: 100px;
+}
+
+.vodiapicker_phone {
+  display: none;
+}
+
+#a_phone {
+  padding-left: 0px;
+}
+
+#a_phone img, .btn-select_phone img {
+  width: 12px;
+}
+
+.b_phone ul {
+  margin-bottom: 0 !important;
+}
+
+#a_phone li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn-select_phone li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 12px;
+}
+
+#a_phone li:hover {
+  background-color: #F4F3F3;
+}
+
+#a_phone li img {
+  margin: 5px;
+}
+
+#a_phone li span, .btn-select_phone li span {
+  margin-left: 10px;
+  color: #040921;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1px;
+  padding: 14.5px 14.5px 14.5px 5px;
+}
+
+.btn-select_phone {
+  position: relative;
+  bottom: 20px;
+}
+
+/* item list */
+.b_phone {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  position: absolute;
+  background: white;
+  z-index: 999999999;
+  top: 50px;
+}
+
+.open {
+  display: show !important;
+}
+
+.btn-select_phone {
+  background: #FFFFFF;
+  border: 1px solid rgba(4, 9, 33, 0.08);
+  border-radius: 16px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #040921;
+  z-index: 99999;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .card-number-input {
   position: relative;
 }
