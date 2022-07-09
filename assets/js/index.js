@@ -162,7 +162,7 @@ function popouts() {
                 e.preventDefault();
                 popout.classList.remove("hidden");
                 box.style.height = "70%";
-                document.body.style.overflow = "hidden";
+                document.querySelector("body").style.overflow = "hidden";
                 box.style.transition = "height 0.3s ease-in-out";
                 setTimeout(() => {
                     box.style.transition = "none";
