@@ -2377,6 +2377,7 @@ body {
 
 .faq-section .faq-left {
   width: 47%;
+  margin-right: 1%;
 }
 
 .faq-section .faq-left .accordion .accordion-item {
@@ -2412,6 +2413,7 @@ body {
 
 .faq-section .faq-right {
   width: 47%;
+  margin-left: 1%;
 }
 
 .faq-section .faq-right .accordion .accordion-item {
@@ -2903,6 +2905,12 @@ footer {
   padding-top: 70px 0px 20px 0px;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    background: rgba(110, 67, 245, 0.12);
+  }
+}
+
 footer .footer-items {
   padding-top: 50px;
   padding-bottom: 30px;
@@ -3056,6 +3064,12 @@ footer .footer-copyright {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-copyright {
+    padding-bottom: 90px !important;
   }
 }
 

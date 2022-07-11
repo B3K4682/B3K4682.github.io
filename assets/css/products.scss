@@ -1758,8 +1758,10 @@ body {
             }
         }
     }
+    
     .faq-left {
         width: 47%;
+        margin-right: 1%;
         .accordion {
             .accordion-item {
                 margin-top: 20px;
@@ -1788,6 +1790,7 @@ body {
     }
     .faq-right {
         width: 47%;
+        margin-left: 1%;
         .accordion {
             .accordion-item {
                 margin: 20px 0;
