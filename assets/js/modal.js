@@ -1,9 +1,14 @@
-$(".close").click(() => {
-    $(".modal-vv").hide();
-});
+$(".modal-vv").each((index, modal) => {
+    $(modal).find('.close').click(() => {
+        $(modal).hide();
+    })
+})
 
-$(".join_btn").click(() => {
-    $("#signup_modal").css("display", "flex");
+$("[data-toggle-modal]").each((index, button) => {
+    let modalId = $(button).attr('data-toggle-modal');
+    $(button).on('click', () => {
+        $('#'+modalId).css("display", "flex");
+    })
 })
 
 $('.pass_visible_btn').click(() => {

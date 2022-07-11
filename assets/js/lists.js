@@ -49,68 +49,68 @@ const searchToggleControl = (map) => {
     return controlUI;
 }
 
-function popout() {
-    const popout = document.getElementsByClassName("popout")[0];
-    let box = document.querySelector(".popout-content");
-    let popoutHead = document.querySelector(".popout-head");
+// function popout() {
+//     const popout = document.getElementsByClassName("popout")[0];
+//     let box = document.querySelector(".popout-content");
+//     let popoutHead = document.querySelector(".popout-head");
 
-    popoutHead.addEventListener("touchmove", (e) => {
-        let touchLocation = e.targetTouches[0];
-        let height = window.screen.height - touchLocation.clientY + 10;
+//     popoutHead.addEventListener("touchmove", (e) => {
+//         let touchLocation = e.targetTouches[0];
+//         let height = window.screen.height - touchLocation.clientY + 10;
 
-        if (height < window.screen.height) {
-            box.style.height = `${height}px`;
-        }
-    });
+//         if (height < window.screen.height) {
+//             box.style.height = `${height}px`;
+//         }
+//     });
 
-    popoutHead.addEventListener("touchend", (e) => {
-        const pos = parseInt(box.style.height);
-        if (pos < window.screen.height / 3) {
-            popout.classList.add("hidden");
-            document.body.style.overflow = "auto";
-            box.style.transition = "height 0.3s ease-in-out";
-            setTimeout(() => {
-                box.style.transition = "none";
-            }, 300);
-        }
-    });
+//     popoutHead.addEventListener("touchend", (e) => {
+//         const pos = parseInt(box.style.height);
+//         if (pos < window.screen.height / 3) {
+//             popout.classList.add("hidden");
+//             document.body.style.overflow = "auto";
+//             box.style.transition = "height 0.3s ease-in-out";
+//             setTimeout(() => {
+//                 box.style.transition = "none";
+//             }, 300);
+//         }
+//     });
 
-    const filterBtn = document.querySelector(".filterBtn");
+//     const filterBtn = document.querySelector(".filterBtn");
 
-    filterBtn.addEventListener("click", () => {
-        popout.classList.remove("hidden");
-        box.style.height = "70%";
-        document.body.style.overflow = "hidden";
-        box.style.transition = "height 0.3s ease-in-out";
-        setTimeout(() => {
-            box.style.transition = "none";
-        }, 300);
-    });
-}
+//     filterBtn.addEventListener("click", () => {
+//         popout.classList.remove("hidden");
+//         box.style.height = "70%";
+//         document.body.style.overflow = "hidden";
+//         box.style.transition = "height 0.3s ease-in-out";
+//         setTimeout(() => {
+//             box.style.transition = "none";
+//         }, 300);
+//     });
+// }
 
-popout();
+// popout();
 
-const mapBtn = document.querySelector(".map-btn");
+// const mapBtn = document.querySelector(".map-btn");
 
 
-mapBtn.addEventListener("click", () => {
-    if(!document.getElementsByClassName("map-btn")[0].classList.contains("disabled")) {
-        const listsRight = document.querySelector(".lists-right");
+// mapBtn.addEventListener("click", () => {
+//     if(!document.getElementsByClassName("map-btn")[0].classList.contains("disabled")) {
+//         const listsRight = document.querySelector(".lists-right");
 
-        if(window.getComputedStyle(listsRight).display === "none") {
-            listsRight.style.display = "block";
-            setTimeout(() => {
-                listsRight.classList.add("show");
-            }, 150)   
-        } else {
-            listsRight.style.display = "none";
-            setTimeout(() => {
-                listsRight.classList.remove("show");
-            }, 150)   
-        }
-    }
-});
+//         if(window.getComputedStyle(listsRight).display === "none") {
+//             listsRight.style.display = "block";
+//             setTimeout(() => {
+//                 listsRight.classList.add("show");
+//             }, 150)   
+//         } else {
+//             listsRight.style.display = "none";
+//             setTimeout(() => {
+//                 listsRight.classList.remove("show");
+//             }, 150)   
+//         }
+//     }
+// });
 
-// $('.map-results').slick();
+$('.map-results').slick();
 
 window.initMap = initMap;
