@@ -686,7 +686,7 @@ body {
   width: 7px;
   height: 6px;
   border-radius: 6px;
-  background: #9D50FF;
+  background: #9d50ff;
   display: inline-block;
   position: relative;
   top: -2px;
@@ -1024,7 +1024,7 @@ body {
   font-size: 11px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: right;
   width: 55px;
   -ms-flex-item-align: end;
@@ -1084,7 +1084,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -1095,7 +1095,7 @@ body {
 }
 
 .features .main-items .main-item .item-section .room-content .room-opts .room-opt .opt-items .opt-item .discount-btn {
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%) !important;
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%) !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1268,14 +1268,14 @@ body {
   line-height: 21px;
   text-align: right;
   letter-spacing: -0.32px;
-  color: #9D50FF;
+  color: #9d50ff;
   margin-left: 5px;
   font-weight: 400;
   color: #04092180;
 }
 
 .features .main-items .main-item .item-section .room-content-mobile .book-item .book-foot .book-stars .star-text span {
-  color: #9D50FF;
+  color: #9d50ff;
 }
 
 .features .main-items .main-item .item-section .room-content-mobile .book-item .book-foot .book-price {
@@ -1313,7 +1313,7 @@ body {
 
 .features .main-items .main-item .item-section .amenities-content {
   padding: 45px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 24px;
@@ -1393,7 +1393,7 @@ body {
   width: 7px;
   height: 6px;
   border-radius: 6px;
-  background: #9D50FF;
+  background: #9d50ff;
   position: absolute;
   top: 8px;
   left: -14px;
@@ -1421,7 +1421,7 @@ body {
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.32px;
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2034,7 +2034,7 @@ body {
 
 .location-section .container .location-body .location-options .location-options-items .location-options-item .location-options-item-right p {
   margin: 0;
-  color: #7444F6;
+  color: #7444f6;
 }
 
 .surroundings-section .surroundings-title h1 {
@@ -2261,7 +2261,7 @@ body {
 }
 
 .things-section .container .things-main .things-wrapper a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 105%;
   height: 1px;
@@ -2299,7 +2299,8 @@ body {
   font-size: 18px;
 }
 
-.things-section .container .things-main .things-wrapper-2 .things-item h1, .things-section .container .things-main .things-wrapper-2 .things-item p {
+.things-section .container .things-main .things-wrapper-2 .things-item h1,
+.things-section .container .things-main .things-wrapper-2 .things-item p {
   opacity: 0.8;
 }
 
@@ -2310,7 +2311,7 @@ body {
 }
 
 .things-section .container .things-main .things-wrapper-2 a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 105%;
   height: 1px;
@@ -2335,7 +2336,7 @@ body {
 }
 
 .things-section .container .things-main .things-wrapper-3 a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 105%;
   height: 1px;
@@ -2344,16 +2345,13 @@ body {
   bottom: 0px;
 }
 
-.faq-section .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.faq-section .container .faq-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #040921;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 768px) {
@@ -2369,80 +2367,103 @@ body {
   .faq-section .container .faq-right {
     width: 100%;
   }
-  .faq-section .container h1 {
-    font-weight: 500;
-    font-size: 20px;
+}
+
+.faq-section .faq-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .faq-section .faq-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .faq-section .faq-flex .faq-left {
+    width: 100% !important;
+  }
+  .faq-section .faq-flex .faq-right {
+    width: 100% !important;
   }
 }
 
-.faq-section .faq-left {
+.faq-section .faq-flex .faq-left {
   width: 47%;
   margin-right: 1%;
 }
 
-.faq-section .faq-left .accordion .accordion-item {
+.faq-section .faq-flex .faq-left .accordion .accordion-item {
   margin-top: 20px;
   border: 1px solid rgba(10, 27, 61, 0.08);
   border-radius: 16px;
 }
 
-.faq-section .faq-left .accordion .accordion-item .accordion-button {
+.faq-section .faq-flex .faq-left .accordion .accordion-item .accordion-button {
   font-weight: 700;
   border-radius: 16px;
   -webkit-box-shadow: unset !important;
           box-shadow: unset !important;
 }
 
-.faq-section .faq-left .accordion .accordion-item .accordion-button::after {
+.faq-section .faq-flex .faq-left .accordion .accordion-item .accordion-button::after {
   background-image: url(../images/arrow-up.svg) !important;
   -webkit-transform: var(--bs-accordion-btn-icon-transform);
           transform: var(--bs-accordion-btn-icon-transform);
   height: 14px;
 }
 
-.faq-section .faq-left .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+.faq-section .faq-flex .faq-left .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   background-image: url(../images/Arrow-Down2.svg) !important;
   -webkit-transform: var(--bs-accordion-btn-icon-transform);
           transform: var(--bs-accordion-btn-icon-transform);
 }
 
-.faq-section .faq-left .accordion .accordion-item .accordion-button:not(.collapsed) {
+.faq-section .faq-flex .faq-left .accordion .accordion-item .accordion-button:not(.collapsed) {
   background-color: unset !important;
   color: unset !important;
 }
 
-.faq-section .faq-right {
+.faq-section .faq-flex .faq-right {
   width: 47%;
   margin-left: 1%;
 }
 
-.faq-section .faq-right .accordion .accordion-item {
+.faq-section .faq-flex .faq-right .accordion .accordion-item {
   margin: 20px 0;
   border: 1px solid rgba(10, 27, 61, 0.08);
   border-radius: 16px;
 }
 
-.faq-section .faq-right .accordion .accordion-item .accordion-button {
+.faq-section .faq-flex .faq-right .accordion .accordion-item .accordion-button {
   font-weight: 700;
   border-radius: 16px;
   -webkit-box-shadow: unset !important;
           box-shadow: unset !important;
 }
 
-.faq-section .faq-right .accordion .accordion-item .accordion-button::after {
+.faq-section .faq-flex .faq-right .accordion .accordion-item .accordion-button::after {
   background-image: url(../images/arrow-up.svg) !important;
   -webkit-transform: var(--bs-accordion-btn-icon-transform);
           transform: var(--bs-accordion-btn-icon-transform);
   height: 14px;
 }
 
-.faq-section .faq-right .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+.faq-section .faq-flex .faq-right .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   background-image: url(../images/Arrow-Down2.svg) !important;
   -webkit-transform: var(--bs-accordion-btn-icon-transform);
           transform: var(--bs-accordion-btn-icon-transform);
 }
 
-.faq-section .faq-right .accordion .accordion-item .accordion-button:not(.collapsed) {
+.faq-section .faq-flex .faq-right .accordion .accordion-item .accordion-button:not(.collapsed) {
   background-color: unset !important;
   color: unset !important;
 }
@@ -2476,7 +2497,7 @@ body {
 }
 
 .reviews .reviews-title .avearge {
-  color: #9D50FF;
+  color: #9d50ff;
 }
 
 .reviews .reviews-title .count {
@@ -2618,7 +2639,7 @@ body {
 }
 
 .reviews .reviews-card .reviews-card-body .reviews-body-button {
-  background: #9D50FF10;
+  background: #9d50ff10;
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 30px;
@@ -2632,7 +2653,7 @@ body {
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.32px;
-  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  background: linear-gradient(246.12deg, #9d50ff 11.55%, #583cf0 104.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2710,7 +2731,7 @@ body {
           align-items: center;
   letter-spacing: 1px;
   color: #040921;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px;
   padding: 5px 10px;
   position: absolute;

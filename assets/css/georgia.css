@@ -1632,6 +1632,16 @@
   color: #ffffff;
 }
 
+.destination {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .destination {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .services .service-items {
     -ms-grid-columns: 1fr 1fr !important;

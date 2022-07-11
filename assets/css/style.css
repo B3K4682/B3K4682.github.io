@@ -2098,6 +2098,17 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .destination {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../images/destination/8.png) !important;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/destination/8.png) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-transition: 0.3s;
+  }
+}
+
 .destination .slick-list {
   padding-top: 40px !important;
 }
@@ -2124,6 +2135,16 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .destination .destination-s-title {
+    background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
 .destination .destination-title {
   font-style: normal;
   font-weight: 700;
@@ -2139,6 +2160,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
 @media (max-width: 768px) {
   .destination .destination-title {
     width: 95%;
+    color: #040921 !important;
   }
 }
 
