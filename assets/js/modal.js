@@ -4,6 +4,12 @@ $("[data-modal]").each((index, modal) => {
         .click(() => {
             $(modal).hide();
         });
+
+    $(modal)
+        .find(".overlay")
+        .click(() => {
+            $(modal).hide();
+        });
 });
 
 $("[data-toggle-modal]").each((index, button) => {
@@ -22,8 +28,8 @@ $(".pass_visible_btn").click(() => {
     }
 });
 
-$('.dropdown-menu').on('click', function(event){
-    // The event won't be propagated up to the document NODE and 
+$(".dropdown-menu").on("click", function (event) {
+    // The event won't be propagated up to the document NODE and
     // therefore delegated events won't be fired
     event.stopPropagation();
 });

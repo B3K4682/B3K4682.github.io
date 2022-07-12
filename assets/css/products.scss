@@ -2232,7 +2232,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     z-index: 99999999999999;
     justify-content: center;
     align-items: center;
@@ -2411,11 +2411,11 @@ body {
 }
 
 .modal-reserve {
+    display: none;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
     z-index: 99999999999999;
     justify-content: center;
     align-items: center;
@@ -2581,12 +2581,13 @@ body {
         }
     }
 }
+
 .modal-third {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     z-index: 99999999999999;
     justify-content: center;
     align-items: center;
@@ -2752,6 +2753,153 @@ body {
         }
     }
 }
+
+.modal-jonathan {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @media(max-width: 1100px) {
+        display: none;
+    }
+    .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0.2;
+        
+    }
+    
+    .modal-wrapper {
+        width: 1060px;
+        height: 589px;
+        z-index: 99999999999999;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 24px;
+        .modal-container {
+            // background-color: red;
+            width: 95%;
+            height: 100%;
+            .close-div {
+                // background-color: green;
+                padding: 2.5% 0;
+                display: flex;
+                justify-content: flex-end;
+                svg {
+                    cursor: pointer
+                }
+            }
+            .modal-body {
+                display: flex;
+                width: 100%;
+                height: 87.3%;
+                justify-content: space-between;
+                .modal-left {
+                    width: 35%;
+                    height: 80%;
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    h1 {
+                        color: #040921;
+                        opacity: 0.75;
+                        font-weight: 700;
+                        font-size: 24px;
+                        margin: 0;
+                    }
+                    .rating {
+                        color: #9D50FF;
+                        font-size: 24px;
+                        span {
+                            color: #040921;
+                            opacity: 0.5;
+                        }
+                    }
+                    .modal-item {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        p {
+                            color: #040921;
+                            font-size: 18px;
+                            svg {
+                                margin-bottom: 3px;
+                                margin-right: 10px
+                            }
+                        }
+                    }
+                }
+                .modal-right {
+                    // background-color: green;
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    .reviews-body-item {
+                        width: 90%;
+                        margin-bottom: 50px;
+                        // background-color: red;
+                        .reviews-item-top {
+                          display: flex;
+                          flex-direction: row;
+                          align-items: center;
+              
+                          .reviews-item-texts {
+                            margin-left: 20px;
+              
+                            .reviews-item-name {
+                              font-weight: 700;
+                              font-size: 18px;
+                              line-height: 21px;
+                              letter-spacing: -0.32px;
+                              color: #000000;
+                            }
+              
+                            .reviews-item-date {
+                              font-weight: 400;
+                              font-size: 14px;
+                              line-height: 21px;
+                              color: rgba(0, 0, 0, 0.7);
+                              margin-top: 4px;
+                            }
+                          }
+                        }
+              
+                        .reviews-item-bottom {
+                          padding: 0;
+                          margin: 0;
+                          margin-top: 24px;
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 16px;
+                          line-height: 24px;
+                          letter-spacing: -0.32px;
+                          color: #000000;
+                        }
+              
+                        @media (max-width: 951px) {
+                          width: 100%;
+                        }
+                      }
+                }
+            }
+        }
+    }
+}
+
 
 
 
