@@ -610,55 +610,97 @@
             }
         }
     }
+  }
 
-    /* Oculto la caja original */
-.check-field [type="checkbox"] {
-    position: absolute !important;
-    left: -9999px;
-  }
-  
-  /* Posición de la label */
-  .check-field [type="checkbox"] + label {
-    position: relative !important;
-    padding-left: 2rem !important;
-    cursor: pointer !important;
-  }
-  
-  .check-field [type="checkbox"] + label:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #040921;
-    border-radius: 5px;
-  }
-  
-  .check-field [type="checkbox"] + label:after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 4px !important;
-    left: 3px;
-    font-size: 1.3em;
-    line-height: 0.8;
-    background: url(../images/checked.svg) no-repeat;
-    transition: all 0.2s;
-  }
-  
-  /* Checked */
-  .check-field [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    transform: scale(0);
-  }
-  
-  .check-field [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .check-field [type="checkbox"]:checked + label::before {
-    border-color: #9D50FF;
-  }
+  .dropdown-addguest{
+    
+    .dropdown-toggle{
+        border: 0 !important;
+    }
+
+    .dropdown-guest-menu{
+        .popout-body-rooms {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-bottom: 30px;
+            padding: 15px;
+            .popout-body-rooms-title {
+                // background-color: green;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .room-line-d-down{
+                margin: 20px 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(4, 9, 33, 0.04);
+            }
+
+            .popout-body-rooms-add {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    text-decoration: none;
+                    p {
+                        color: #040921;
+                        margin: 0;
+                        font-size: 14px;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+            .popout-body-rooms-items {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 10px;
+                .popout-body-rooms-item {
+                    width: 100%;
+                    // border: 1px solid green;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // width: 10;
+                    .popout-body-rooms-item-title {
+                        width: 70px;
+                        p {
+                            margin: 0;
+                            &:nth-child(1) {
+                                color: #040921;
+
+                            }  
+                            &:nth-child(2) {
+                                font-size: 11px;
+                                color: #040921BF;                                        ;
+                            }  
+                        }
+                    }
+                    .popout-body-rooms-item-counter {
+                        display: flex;
+                        border: 1px solid rgba(4, 9, 33, 0.04);
+                        border-radius: 8px;
+                        margin-left: 70px;
+                        padding: 7px 13px;
+                        p {
+                            margin: 0;
+                            margin: 0 20px;
+                        }
+                        button {
+                            border: none;
+                            background-color: transparent;
+                            &:nth-child(1) {
+                                color: #040921;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
   }
