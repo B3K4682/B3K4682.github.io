@@ -1074,6 +1074,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   height: 16px;
   border: 1px solid #040921;
   border-radius: 5px;
+  top: 1px;
 }
 
 .check-field [type="checkbox"] + label:after {
@@ -1088,6 +1089,7 @@ header .header-items .header-item .menu-items .menu-item .burger-btn div {
   background: url(../images/checked.svg) no-repeat;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  top: 5px !important;
 }
 
 /* Checked */
@@ -2863,6 +2865,14 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
   z-index: 999999999999;
 }
 
+.modal-vv .modal-vv-content::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 @media (max-width: 1000px) {
   .modal-vv .modal-vv-content {
     width: 60%;
@@ -3267,6 +3277,375 @@ footer .footer-copyright .copyright-items .copyright-item .payment-text {
           text-decoration-line: underline !important;
   color: #040921;
   opacity: 0.8;
+}
+
+.dropdown-menu {
+  border: 1px solid #F0F1F3 !important;
+  border-radius: 16px !important;
+  background: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.08) !important;
+          box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+.find-location-menu {
+  border: 1px solid #F0F1F3 !important;
+  border-radius: 16px !important;
+  background: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.08) !important;
+          box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+.find-location-menu .dropdown-text {
+  padding: 7px 15px;
+}
+
+.find-location-menu .dropdown-text .location-input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  margin-top: 5px !important;
+}
+
+.find-location-menu .dropdown-text .location-input::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(4, 9, 33, 0.5);
+  opacity: 1;
+  /* Firefox */
+}
+
+.find-location-menu .dropdown-text .location-input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(4, 9, 33, 0.5);
+  opacity: 1;
+  /* Firefox */
+}
+
+.find-location-menu .dropdown-text .location-input::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(4, 9, 33, 0.5);
+  opacity: 1;
+  /* Firefox */
+}
+
+.find-location-menu .dropdown-text .location-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(4, 9, 33, 0.5);
+  opacity: 1;
+  /* Firefox */
+}
+
+.find-location-menu .dropdown-text .location-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(4, 9, 33, 0.5);
+}
+
+.find-location-menu .dropdown-text .location-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(4, 9, 33, 0.5);
+}
+
+.find-location-menu .dropdown-divider {
+  margin-top: 0 !important;
+}
+
+.find-location-menu a {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #040921 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.find-location-menu a svg {
+  margin-right: 12px;
+}
+
+.find-location-menu a:hover {
+  background: #9c50ff0c !important;
+  opacity: 1 !important;
+}
+
+.dropdown-guest {
+  /* Oculto la caja original */
+  /* Posición de la label */
+  /* Checked */
+}
+
+.dropdown-guest .dropdown-toggle {
+  border: 0 !important;
+}
+
+.dropdown-guest .dropdown-guest-menu {
+  width: auto !important;
+  z-index: 99999999999;
+  position: relative;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar {
+  width: 350px;
+  margin: auto;
+  margin: 0 20px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .calendar-date {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #040921;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .calendar-date svg {
+  margin-left: 7px;
+  margin-top: -3px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .week {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .week div {
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.7922px;
+  line-height: 18px;
+  color: #040921;
+  width: 100%;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days div {
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.7922px;
+  line-height: 18px;
+  color: rgba(4, 9, 33, 0.5);
+  width: 100%;
+  height: 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .today {
+  color: #040921;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .active-start, .dropdown-guest .dropdown-guest-menu .calendar .days .active-end {
+  position: relative;
+  color: #fff;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .active-start::before, .dropdown-guest .dropdown-guest-menu .calendar .days .active-end::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: linear-gradient(246.12deg, #9D50FF 11.55%, #583CF0 104.8%);
+  border-radius: 100px;
+  width: 85%;
+  height: 90%;
+  z-index: -1;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .in_range {
+  background: linear-gradient(246.12deg, #9c50ff0a 11.55%, #573cf00a 104.8%);
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .in_range_start {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar .days .in_range_end {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-flex label {
+  margin-left: 0;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-flex .extra-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(4, 9, 33, 0.75);
+  margin: 0px 15px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-flex .extra-text svg {
+  margin-right: 5px;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-item p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #040921;
+  margin-bottom: 0;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-item p span {
+  font-weight: 700;
+}
+
+.dropdown-guest .dropdown-guest-menu .calendar-extra .extra-item a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #040921;
+  text-decoration: underline !important;
+  margin-left: 20px;
+}
+
+.dropdown-guest .check-field [type="checkbox"] {
+  position: absolute !important;
+  left: -9999px;
+}
+
+.dropdown-guest .check-field [type="checkbox"] + label {
+  position: relative !important;
+  padding-left: 2rem !important;
+  cursor: pointer !important;
+}
+
+.dropdown-guest .check-field [type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #040921;
+  border-radius: 5px;
+}
+
+.dropdown-guest .check-field [type="checkbox"] + label:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 4px !important;
+  left: 3px;
+  font-size: 1.3em;
+  line-height: 0.8;
+  background: url(../images/checked.svg) no-repeat;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.dropdown-guest .check-field [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.dropdown-guest .check-field [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.dropdown-guest .check-field [type="checkbox"]:checked + label::before {
+  border-color: #9D50FF;
 }
 
 .menu-item:nth-child(3) {

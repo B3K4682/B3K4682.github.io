@@ -21,3 +21,9 @@ $(".pass_visible_btn").click(() => {
         passInput.attr("type", "password");
     }
 });
+
+$('.dropdown-menu').on('click', function(event){
+    // The event won't be propagated up to the document NODE and 
+    // therefore delegated events won't be fired
+    event.stopPropagation();
+});

@@ -253,6 +253,7 @@ select{
   height: 16px;
   border: 1px solid #040921;
   border-radius: 5px;
+  top: 1px;
 }
 
 .check-field [type="checkbox"] + label:after {
@@ -266,6 +267,7 @@ select{
   line-height: 0.8;
   background: url(../images/checked.svg) no-repeat;
   transition: all 0.2s;
+  top: 5px !important;
 }
 
 /* Checked */
