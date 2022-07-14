@@ -398,11 +398,15 @@ li {
   position: relative;
 }
 
+.date-flex .input-date-item .dropdown-toggle::after {
+  display: none;
+}
+
 .date-flex .input-date-item input {
   width: 100%;
 }
 
-.date-flex .input-date-item svg {
+.date-flex .input-date-item .input-date-icon {
   position: absolute;
   top: 16px;
   right: 16px;

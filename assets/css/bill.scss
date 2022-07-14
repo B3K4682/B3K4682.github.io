@@ -372,11 +372,15 @@ li{
     .input-date-item{
         width: 48%;
         position: relative;
+
+        .dropdown-toggle::after{
+          display: none;
+        }
         input{
             width: 100%;
         }
 
-        svg{
+        .input-date-icon{
             position: absolute;
             top: 16px;
             right: 16px;
